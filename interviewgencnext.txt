@@ -1,0 +1,384 @@
+Technical Round
+
+*****************************General***********************
+* What’s your favorite subject?
+= DSA,OOPS,C++
+
+* procedural programming language:-
+= we have given a step by step instruction like c,ex:- we want to print every line from a file in c languages we have to write that how we will access the file and retirve the data from it, but in declatrive programming langye we say what we want, and we dont state how to get it,like sql we dirctly write what data we wnat to obtain from which table.Ex:- select moviename from movies where year>2000, no for loops is used etc..
+
+* When I see a new emerging technology, how I research about it? Explain one technology I have recently researched about.
+=
+
+* Which is the most important stage in SDLC?
+= each and every stage in sdlc is importnat, if we remove one step in cycle the their is a chance that the product will crash.
+
+* Who invented Java
+= James Gosling
+
+* Is it possible to call one constructor from another in Java?
+= Yes, any number of constructors can be present in a class and they can be called by another constructor using this() [Please do not confuse this() constructor call with this keyword]. this() or this(args) should be the first line in the constructor. This is known as constructor overloading.
+
+* What was the name of java before named “java”
+= The language was initially called Oak after an oak tree that stood outside Gosling's office. Later the project went by the name Green and was finally renamed Java, from Java coffee, the coffee from Indonesia.
+
+* How to run a java program
+= From Terminal install open jdk sudo apt-get install openjdk-7-jdk. Write a java program and save the file as filename.java.Now to compile use this command from the terminal javac filename.java.To run your program that you've just compiled type the command below in terminal: java filename.
+
+* why we need java as we have c, c++
+= We need Java because it vastly increases the abstraction level, so developers do not need to worry about memory management and safety, garbage collection etc. So we can focus on the work and therefore increase our productivity. One is the use of bytecode and the desire to have a write once, run anywhere language.
+
+* Software Development Life Cycle?
+= Software Development Life Cycle (SDLC) is a process used by the software industry to design, develop and test high quality softwares. The SDLC aims to produce a high-quality software that meets or exceeds customer expectations, reaches completion within times and cost estimates.
+
+*What are the different stages in it?
+= Feasibility study:- possible to make software or not
+1. Planning and Requirement Analysis SRS (Software Requirement Specification) document to Defining Requirements
+3. Designing the Product Architecture Design Document Specification. This DDS is reviewed by all the important stakeholders and based on various parameters as risk assessment, product robustness, design modularity, budget and time constraints, the best design approach is selected for the product.
+4. Building or Developing the Product
+5. Testing the Product
+6.  Deployment in the Market and Maintenance
+
+* how hashing works and its uses.
+= An element is converted into an integer by using a hash function. This element can be used as an index to store the original element, which falls into the hash table. The element is stored in the hash table where it can be quickly retrieved using hashed key.
+
+* What are the different Life Cycle Model?
+= SDLC models followed in the industry −
+Waterfall Model
+Iterative Model
+Spiral Model
+V-Model
+ITerative waterfall model
+Agile
+Dvops
+Big Bang Model
+
+* Which one of them is best and why?
+= 
+
+* What is the difference between concatenation of strings using ‘+’ and Stringbuffer. Advantages and Disadvantages of both and the instances where one would perform better than the other.
+= String class is immutable thus when you concat too many strings because every time it creates new instance,it is slow.
+
+* Briefly explain about Java
+= orcale is responsible for maintancenc and improvement, it is 99% oops and 1 % is becuas of primitve datatyep. passed in refrence, contians packages mroe than 1200
+
+* what happens if we don’t use static in main method?
+= jvm dosent create a insance of the class, and it simply use the class name abnd call main emthod, jvm dosnt do that so it dosnt create a onstance of the class, and initialize the variable using constusctor if available.
+
+
+********************Coding******************* 
+Given a set of numbers how would you find two numbers in O(n) time such that their sum is exactly n ?
+Can you write a simple program which uses Multiple Inheritance in C++?
+Toughest question which u have solved in Competitive Programming
+Can you tell a Programming Language which uses Procedural Programming.
+Print Pascal's Triangle
+Complexity for Binary Search and Condition to apply Binary Search
+You are given an array of  numbers and some of them occur more than 1 time and not sorted. How would you print only the distinct numbers?
+Find the frequency of the array elements (As the array contains some repetitive elements)?
+Count the numbers of vowels in a string.
+write to reverse the string without using reverse function.
+Reverse the Link list
+Find the sum of boundary nodes of binary tree
+Print link list in reverse.
+Ocount the frequency of character in a given string,
+check whether the given IP address is valid or not.
+Linear and Non linear Data structures.
+* What are Data Structures & why do we use Data structures.
+= a data structure is a data organization, management, and storage format that enables efficient access and modification. data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data. Data structures provide a means to manage large amounts of data efficiently for uses such as large databases and internet indexing services. Usually, efficient data structures are key to designing efficient algorithms.
+
+* write the code for Binary search.
+
+*write code on try-catch-finally, throws.
+=
+
+* Difference between C++ & Java.
+* Can you write a program to reverse a linked list?
+* Deletion from a tree
+* write a basic program on printing 10 numbers.
+* remove the loop from the Linked List.
+* Tree traversal(inorder, preorder, postorder and level-order)
+* Detection of loop in LinkedList
+* If loop detected, then find the begin point of loop
+* write a program in C for fibonacci series.
+* binary search algorithm.
+* programming language which included pointers, union, structures, loops.
+* Java use call by value or by reference?
+* writer program call by value and call by reference
+* Tell me about semaphore? 2
+* why use semaphore? 2
+* gave me the series 2, 5, 7, 12 ….  and asked me to write a code for it.       
+* What is sorting?
+* writing a program of any Sorting which you like
+* Find third largest element from an array using sorting technique and find the occurrence of the same.Same code using LinkedList or any other data structure except array.
+* What is the difference between a stack and a linked list?
+* Write a program to sort a list of numbers and find out the second largest number.
+* an array of 4 numbers and asked how are they stored in the linked list.
+* Write a code to reverse these elements in the linked list.
+What are the two ways by which arguments are passed in C.
+
+
+****************************OOPS********************************
+Real world example of OOPs Concept
+Abstraction and Encapsulation Difference
+Virtual Functions in C++
+Difference between POP and OOP?
+Which type of inheritance is not supported in Java?
+Types of Inheritance 
+Can you explain the concept of Abstraction with an example?
+Differences between Procedural and Object Oriented Programming
+What is Class and Object?
+Exception Handling
+Dangling Pointers
+Can you find any object in the code of sorting you have written?
+What are abstract classes? Can they make objects?
+Which type of Programming Language is JAVA?
+What is OOP?
+What are the features of OOP?
+What is Abstraction?
+What is Abstract Class?
+We can create how many instance of an abstract class? Explain with an example.
+what is JDBC ? also connectivity code?
+Why Java support Pointer Concepts?
+aggregation, association, specialization, generalization, IS-A relationship, Encapsulation, Polymorphism
+What is method overloading and overriding?
+What is Object Oriented Programming ?
+What are the features of Object Oriented Programming ?
+What is Polymorphism and its types ??
+Write the code through any example to show polymorphism in your favourite language.     
+5.What is constructor?What is the use of it?What is the return type of constructor?
+6.Explain OOPs Concept
+7.Is “const” keyword exist in java?
+8.Method Overloading and Method Overriding
+9.What are the different types of inheritance?            
+What are classes and objects ?
+I: Scanner or BufferedReader and Why?
+I: what is the use of static keyword ?
+I: static classes and nested classes.
+I: Do you know about the collection framework? Tell me about HashMap . Tell me about ArrayList, HashSet vs Treeset.
+What is Inheritance?
+What are the types of Inheritance?
+Can you explain the difference between Multiple Inheritance and Multilevel Inheritance?
+
+
+
+**************************OS**************************
+What is Operating System?
+Difference between Process and Threads.
+What is processor?
+What is microprocessor?
+(Deadlock, Scheduling 
+Difference between Distributed and realtime OS.
+Why we use different devices?
+ OS deadlock and Critical Section, Paging,
+What is an OS?
+What is the difference between a processor and an OS?
+
+
+**************************DBMS*****************************
+* What is SQL?
+= Structured query language, it started as a research project at IBM ,by boyee and codd, it has became a standard way to query, update, delte, modigy or insert in a database. It is a domain specific language, means that it can be only in database, ex:- we cant build a OS,webiste etc using sql, declatirve programming language,
+* What is the candidate key?
+= A subset or a set of superkey attributes from whihc we can determine all the attributes is known as candiate key or a minimal attribute super key is called a candidate key,ex:- Super keys:- {A, bc} from which we can determine all the attributes then A will be the candidate key because it has minimum attributes from whihc we can dtermine all the other attributes or the closure of A+ can determine all the other attributes. Always check if their exist a subset of superkey by whihc if we find the closure of the subset of superkey if we are getting all the attributes or not.
+
+IMP :- and we have to keep in mind one thing that if their exist a attribute whihc is not reachable by any functional dependency then we have to consider that in every candiate key.
+
+* What is super key?
+= A subset or a set of attributes from whihc we can determine every other attribute then it is called a superkey.Ex:- Attributes a,b,c,d,e  and assume AB is superkey then their exist some functional dependency among the attribtes by whihc which when using Ab as super key we can determine every attribute.  
+
+* Trivial vs Non trivial functional dependency
+= If XY->X :- Trivial  when RHs is a subset of LHS 
+  If X->C :- Non Trivial  When RHS is not a subset of LHS
+   
+* what is schema?
+= How the data is organized & what are the tables and its relation between them
+
+* What is database?
+= so what makes database differnet from traditional way of storeing and retrieveing or performing operations on data in file system is that database use various concepts like indexing,queriey optimizer etc, which makes it way faster , to make operations like updation,deletion, modfifyication,insertipon,deletion way faster,than a tradition file system.
+
+SQL-> PARSER,compiler -> query optimizer
+parser:- breaks the queirey in chunks and tries to understand instruction then complier compiles it insome language like c,c++, java or in whihc the db it is writeen internally,
+query optimizer = it says what is the most optimal way  to execute this statment, what is the best sequence we should execute, or what data structure we should use, and different database like, orcale, mysql etc will have different database
+executor:- whihc executes the code
+
+* Aggrgate functions:- computes a single value on a set of rows and returns a aggregate,Ex:- 
+COUNT, MIN,MAX,SUM,AVG
+SELECT MIN(year) FROM movies;
+SELECT MAX(year) From movies;	
+SELECT COUNT(*) FROM movies; // return number of rown in movies
+SELECT COUNT(*) FROM movies WHERE year>2000
+
+* what is distinct command
+= It can be applied on single column and multiple columns
+SELECT DISTINCT genre FROM movies_genre; // slect all the distinct genre from movies_genre table and genre column o/p will be comedy, horror etc
+SELECT DISTINCT first_name, last_name FROM DIRECTORS ORDER BY first_name; // string firstname and last name combined should be unique
+
+* GROUP BY CMD;
+= It groups the rows as the per the coulmn we choose,It will create a set of the specific items we choose to group together .
+SELECT year, COUNT(year) FROM movies GROUP BY year;
+internall It will create a table for all the distinct year and in each of those it will contains the detials of the all the movies whihc are released in that year and then it will output the number of movies which are released in that year along with the year.   
+2001{moviedeatails1,moviedetails} 
+2002{moviedetials3,dmovies details4}
+O/P 2001 50004
+     2007  4568
+SELECT year, COUNT(year) FROM movies GROUP BY year ORDER BY year;
+
+What is DBMS?
+Why we use DBMS?
+. Write a query to get the second highest number from the student_marks table.
+What is view?
+If Serial no. has to be Primary Key in a Database, should it be stored in a varchar or number datatype.
+ (SQL, Joins, Triggers, Stored Procedures, Normalization).
+Employee table and explain how 1st normalization to BCNF has to applied on the table.
+What is the difference between primary key and unique constraints? why are they called unique constraints?
+Questions were on queries like find 2nd highest salary of employee, Views and its types, Normalisation, etc.
+What is ACID property?
+Update & Select query in DBMS
+How to search any query in DBMS?
+Write a query to find out the second largest salary from employee table.
+ What is the primary key?
+  What is BCNF?
+  What is ACID Property ??
+Explain the meaning of each term in ‘ACID’ .
+Give one real life example of ‘D-Durability’ ??
+* how to do normalization?
+= first find out all candiate keys, then write down all the prime attributes, check its in 2 nf, no part of a candite key is detrmining a non prime attribute, then remove any transitive dependancey, by giving them a seperate relation or table, and making them the superkey for that table
+* What is Normalization ?
+= Decomposition of set of attributes to minimize redundancy in such a way that relation function dependanccey between attributes remains lossless & reduce anomalies.
+
+* What are the anomalies of Normalization?
+= Insertion, update and deletion anomaly. when not in 1NF,2NF----4NF
+
+*Types of Normalization?
+= 1NF:- Their is no multivalued attribute, if their is then split it into seperate rows.
+2NF :- When their exist no part of a candiate key determininga non prime attribute,partial dependencey(part of a candidate key or proper subset determines some other attribute other than itself) and relation is in 1NF, if their exist PD, then remove it by creating another relational table.
+3NF:- For all non-trivial FD, When X->Y WHERE Y is a prime attribute then we have to remove that, & we are in 2NF.All prime attribute must depend on a s-key. no non prime attribute is transitively dependant ona key. No non prime attribute is depending a non prime attribut.
+Ex:- X->Y, Y->Z, Z->A
+NOTE:- Either X->Y   , either X is a superkey or Y is a prime attribute
+**BCNF= Every FD X->Y , x is a superset of & Y its subset, (trivial) & X is superkey, Every BCNF is in 3 NF. or X->Y then either X has to be a super key or Y has to bea prime attribute
+Note:- X->Y , X is auper key
+
+** Achievabilty of BCNF
+we cannot always gaurantee 
+lossless, dependency preserving and BCNF
+R(ABC)     FD{AB->C,C->B}
+R1(AB)  =  {AB}
+R2(CB)  = {CB}
+
+What is Primary Key and Foreign Key ??
+If you are given employee name, employee salary, employee id, then
+Create a table through SQL query.
+What is DBMS?
+5. What are the different types of DMBS?
+6. What is RDBMS?
+7. What is the difference between RDBMS and DBMS?
+8. What is MySQL? Is it RDBMS or DBMS?
+9. How we store data in RDBMS?
+10. RDBMS also store data in .sql format file. So how can we differentiate the file of DBMS and RDBMS?
+11. What is Primary Key? How it is different from Unique Key?
+12. What is Foreign Key and How we use it to create connection between tables?
+13. What are attributes?
+14. What are the different types of SQL Languages? Explain them briefly with examples.
+15. Where we can use CREATE command? Write a query using CREATE.
+16. Now, use CREATE command to create something else except these two (TABLE and DATABASE).
+Explain Normal Forms
+12.Sql Queries
+What is the Difference between Delete and Truncate ??
+If you have to delete employee id – 400 from employee table, then
+How will you delete it ?? Write its SQL query.
+Java OOPS, Database Tables and SQL Queries,
+
+  
+
+*****************************Computer network*********************************
+Can you explain me what is a cloud?
+: 7 layers of OSI model.
+3.http, https difference
+What is a repeater?
+: Whats the network topology in this lab? (yes, my interview was going in a computer lab)
+
+*************HR************
+* tell something about yourself?
+= Good evening everyone & thank you for giving me this opportunity. So my full name is adarsh kunwar and im currently pursuing Btech from GEU & my branch is CS.
+I'm a CS enthusiast & I really enjoy participating in coding challenges, create projects,& I really like to read & write articles, editorials & creating educational videos. & all these activities have really helped me grow my skills,& knowledge & I'm a compassionate & cooperative person & I like to take a planned approach towards a problem,& if I'm working in a team with a goal to solve a problem, I like to hear all sides & then take the most efficient approach which can be applied at the moment. & that's about it.	
+
+Tell me about the project you have done
+What do you know about cognizant. 
+ Who motivates you the most?Who motivates you the most?
+ Three take away from IIT Patna, etc.
+ talk about about my strengths and weaknesses.
+asked about my day
+Why do you want to join cognizant?
+14. How cognizant will help you to improve your skill?
+Okay, Apart from these things (cricket and college study), What do you do in your free-time?
+ What are your hobbies?
+5. Do you have any interest in sport? (I answered : Cricket)
+What is the current revenue of cognizant?
+Where do you see yourself after 10 years?
+ Introduce yourself apart from what written in your CV.
+ How will you handle problems you will face jumping into professional  world from your student life?
+ What do you know about Cognizant?
+ If you are the education minister of the country and you have to do some changes in the syllabus of engineering, what will you do?
+What are your hobbies?
+What do you do in your free time?
+Why should we hire you?
+Can you tell me the annual revenue of Cognizant?
+What are the things you think you will be liking in Cognizant more than other It firms?
+Tell me about Cognizant.
+)Whether I would like to learn any other programming language other than C++ and Python?
+4)My long term career objective.
+5)Whether I would prefer online courses for learning?If Yes, Why?
+What made you to choose Cognizant?
+What value can you bring to the Organization
+Have you faced any problem during some of your project? How did you solved it?
+What new Technology Stack are you currently working on?
+Why do you want to join Cognizant?
+Where are you from and are you willing to relocate?
+About her essay that she had written in her AMCAT test.
+Tell me something about your family.
+Can you told me some sentences why Listening Skills are important in our life?
+What is your biggest weakness?
+Why CTS? (Prepare this very well).
+Why after ECE you want to join an IT company(Tricky but there is a more tricky way to tackle this so be prepared).
+What was your most challenging situation in life until now.
+If I ask your friends about you, what will they say?
+ Describe yourself in three bullet points.	
+ And what about your weakness?
+ What is your final year project ?? Tell me in brief. (Most important.. )
+5.  Are you doing it alone or in group ??
+6.  How flexible are you in group ??
+What do you learn from college apart from academics.
+. Tell me something unique about yourself that differs you from rest of the candidates. 
+what makes you feel challenge in the college   
+ 
+ 
+*********************Other********************
+* who is the CEO of CTS
+= Brian Humphries
+
+* What do you mean by cryptocurrency?
+= A cryptocurrency is a digital or virtual currency that is secured by cryptography, which makes it nearly impossible to counterfeit or double-spend. Many cryptocurrencies are decentralized networks based on blockchain technology—a distributed ledger enforced by a disparate network of computers.
+
+* What is a Thread?
+A thread is a path of execution within a process. A process can contain multiple threads.
+Why Multithreading?
+A thread is also known as lightweight process. The idea is to achieve parallelism by dividing a process into multiple threads. For example, in a browser, multiple tabs can be different threads. MS Word uses multiple threads: one thread to format the text, another thread to process inputs, etc. More advantages of multithreading are discussed below
+
+* Process vs Thread?
+The primary difference is that threads within the same process run in a shared memory space, while processes run in separate memory spaces.
+Threads are not independent of one another like processes are, and as a result threads share with other threads their code section, data section, and OS resources (like open files and signals). But, like process, a thread has its own program counter (PC), register set, and stack space.
+
+Can you print  your name "Ankita Rajput" without using semicolon (;) ? If possible then how?
+Do you know Python?
+Do you know Linux?
+Explain Software Development Life Cycle in short. What are the different 
+ I know about data science and as I knew he went on asking based on cloud computing and IoTphases of it?
+What are the different types of testing?
+* What is cache memory?
+* SDLC (Software Engineering)
+* Which stage of SDLC do you prefer?
+* Which is most important stage in SDLC?
+* i am hacking your college website and as an IT student what will you suggest to prevent hacking
+
+**********************Puzzle**********************
+ If today is Monday, what will be the day after 45 days.
+  how a biased coin can be made into unbiased.
