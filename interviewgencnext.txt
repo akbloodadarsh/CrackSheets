@@ -162,7 +162,9 @@ Can you explain the difference between Multiple Inheritance and Multilevel Inher
 
 
 **************************OS**************************
-What is Operating System?
+*What is Operating System?
+= It acts as a resource manager(process,memory management),provides security & maintainence(their are daemons runnning in the background) provides convinence and gives us utilities,can be used even by someone from a non technical background and suppose a programmer writes some code in some programming language then like:- printf and we run that then we dont need to worry about how operating system displays the otput on the screen, and if a non technical is using chrome to browse internet , then os provides its resources and help it to connect to wifi using NIC, and the user need not to worry about how is it connecting, and if we want to search some file or app then we type its name and os finds it for us 
+
 Difference between Process and Threads.
 What is processor?
 What is microprocessor?
@@ -189,6 +191,9 @@ IMP :- and we have to keep in mind one thing that if their exist a attribute whi
 = If XY->X :- Trivial  when RHs is a subset of LHS 
   If X->C :- Non Trivial  When RHS is not a subset of LHS
    
+* Cascade:- 
+= It is used in conjunction with ON DELETE or ON UPDATE. It means that the child data is either deleted or updated when the parent data is deleted or updated.It is used in conjunction with ON DELETE or ON UPDATE. It means that the child data is set to NULL when the parent data is deleted or updated.
+
 * what is schema?
 = How the data is organized & what are the tables and its relation between them
 
@@ -199,6 +204,80 @@ SQL-> PARSER,compiler -> query optimizer
 parser:- breaks the queirey in chunks and tries to understand instruction then complier compiles it insome language like c,c++, java or in whihc the db it is writeen internally,
 query optimizer = it says what is the most optimal way  to execute this statment, what is the best sequence we should execute, or what data structure we should use, and different database like, orcale, mysql etc will have different database
 executor:- whihc executes the code
+
+** Data manipulation langauage?DML
+= SELECT, INSERT, UPDATE, DELETE
+
+* SELECT CMD
+= used to generate a result set with the tcolumns names mentione along with thier metadata.
+the order of the column could be anything as given by the user, example we can select movie name first then year or vice-versa, a simple select query wil preserve the order of the data
+ SELECT movie,year FROM movies;
+ SELECT * FROM movies;
+ 
+* INSERT
+// single row insert
+= INSERT INTO movies(id,name,year) VALUES (4155,'SCHINDLER LIST',1998)
+// multiple row insert
+INSERT INTO movies(id,name,year) VALUES (4155,'SCHINDLER LIST',1998), 4155,'JOBS',1999)
+// Insert from one table  to another
+INSERT INTO movies SELECT * FROM old_movies WHERE name IN ('pratt','lisa')
+// Insert from one table  to another when schema are not same
+INSERT INTO movies(id,movie) SELECT oid,omovie, FROM old_movies WHERE name IN ('pratt','lisa')
+
+* UPDATE
+= UPDATE movies SET movie="Gone",year=0 WHERE year = 1990; 
+
+* DELETE 
+= DELETE FROM movies WHERE id = 1;
+if you want to remove all rows then same cmd but without a where clause
+
+
+** DATA DEFINITION LANGUAGE
+** CREATE
+CREATE TABLE tname (id INT PRIMARY FOREIGN, lang VARCHAR(50) NOT NULL)
+we can write data type along with constraint to the columns
+
+Constrians can be:-
+NOT NULL:- ensure that column iis ntot null
+UNIQUE:- eNSURe that eveyr value is unique
+PRIMARY KEY:- A combination of not null andunique
+FOREIGN KEY:- uniquely identifies a row/record in another tbale
+CHECK:- Ensure that all values ina column satisfies a specific condiiotn
+INDEX :- used to create and retrieve data from the database very quickly
+(Indexing technizues are use dsucha as hashing, B+tree)
+
+* ALTER
+:- ADD, MODIFY DROP
+= ALTER TABLE tablename ADD columnname DATATYPE(limit);
+= ALTER TABLE tablename MODIFY columnname DATATYPE(limit);
+= ALTER TABLE tablename DROP columnname;
+
+* DROP
+removes table along wiht all the data permananetly
+= DROP TABLE tablename;
+= DROP TABLE tablename IF EXISTS;
+
+* TRUNCATE
+= TRUNCATE TABLE tablename;
+
+* DATA CONTROL LANGUAGE
+= GRANT , REVOKE
+// user1 has access to that database
+GRANT ALL ON db1 TO 'USER1'@'localhost'
+
+// user1 has access to all database to run ALL the queries
+GRANT ALL ON * TO 'USER1'@'localhost'
+// role1 and role2 gets assigned to user1,user2
+GRANT 'role1','role2' TO 'user1'@'localhost1','user2'@'localhost2';
+// role3 gets access to world database to run select quesries
+GRANT SELECT ON world TO 'role3';
+
+* REVOKE
+= Takes away the privelages
+REVOKE INSERT ON *.* FROM 'Jefery'@'localhost';
+REVOKE 'role1','role2' FROM 'user1'@'localhost','user2'@'localhost';
+REVOKE SELECT ON world.* FROM 'role3';
+******
 
 * Aggrgate functions:- computes a single value on a set of rows and returns a aggregate,Ex:- 
 COUNT, MIN,MAX,SUM,AVG
@@ -212,15 +291,154 @@ SELECT COUNT(*) FROM movies WHERE year>2000
 SELECT DISTINCT genre FROM movies_genre; // slect all the distinct genre from movies_genre table and genre column o/p will be comedy, horror etc
 SELECT DISTINCT first_name, last_name FROM DIRECTORS ORDER BY first_name; // string firstname and last name combined should be unique
 
+* SHOW CMD
+//To see all the tables we have
+= SHOW TABLES;
+
+* DESCRIBE CMD
+= If you want to check teh detials of the tabel
+ DESCRIBE table_name
+
+  
 * GROUP BY CMD;
-= It groups the rows as the per the coulmn we choose,It will create a set of the specific items we choose to group together .
+= It groups the rows as the per the coulmn we choose,It will create a set of the specific items we choose to group together even NULL values.
 SELECT year, COUNT(year) FROM movies GROUP BY year;
 internall It will create a table for all the distinct year and in each of those it will contains the detials of the all the movies whihc are released in that year and then it will output the number of movies which are released in that year along with the year.   
 2001{moviedeatails1,moviedetails} 
 2002{moviedetials3,dmovies details4}
 O/P 2001 50004
-     2007  4568
+     2007 4568
 SELECT year, COUNT(year) FROM movies GROUP BY year ORDER BY year;
+
+* WHERE and conditinal statemns
+= WHERE is applied on individual rows and we use conditions along with them
+Conditions :-
+Not equal to:-   != <>
+Equal to:-   =    (NOTE:-  = does not work with NULL,  Ex:- SELECT movie FROM movies WHERE rank = NULL;)
+thus we use IS NULL & IS NOT NULL
+SELECT movie FROM movies WHERE rank IS NULL;
+SELECT movie FROM movies WHERE rank IS NOT NULL; 
+
+// sleect all comedy movies genre
+SELECT movie FORM movies WHERE genre = "COMEDY"; 
+
+* lOGICAL Operators
+= LIKE CMD
+// For string 
+// Prefix could be anything but at the end it should M
+SELECT * FROM movies WHERE movie LIKE '%M', O/P blaM, MGOeqwG
+// Sufffix could be anything but at the start it should M
+SELECT * FROM movies WHERE movie LIKE 'M%', O/P blaM, MGOsdwG
+// prefix & suffix could be anything but middle should M
+SELECT * FROM movies WHERE movie LIKE '%M%', O/P blaMadsa, adsMGeqwOG
+// at the _ their could be any character but the prefix and suffix should be same
+SELECT * FROM movies WHERE movie LIKE 'M_ok', O/P Mbok, Mcok
+in % their can be 0 or more chracter but in _ their has to be 1 charter
+Use escape character \ if you want to treat  % and _ symbol as a normal charcter & not as a special symbol
+SELECT * FROM movies WHERE movie LIKE '\%M\_ok', O/P %M_ok
+
+* EXISTS
+= The EXISTS operator is used to test for the existence of any record in a subquery. The EXISTS operator returns true if the subquery returns one or more records.
+SELECT SupplierName FROM Suppliers WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierID = Suppliers.SupplierID AND Price < 20) ORDER BY SupplierName;
+
+SELECT moviename FROM movies WHERE EXISTS(SELECT director FROM directors WHERE movies.directorname = director)
+
+* AND CMD
+= for using multiple conditions
+SELECT * FROM movies WHERE first_name LIKE "MID" AND last_name = "3"; 
+
+* OR CMD
+= if any conditon is true
+SELECT * FROM movies WHERE first_name LIKE "MID" OR last_name = "3"; 
+
+* IN CMD
+= Equivalent of multiple AND condition but it creates a set and check if the item mentionsed is in the set or not
+= SELECT * FROM movies WHERE genre IN ('COMEDY',HORROR);
+
+* NOT CMD
+= SELECT * FROM movies WHERE genre NOT IN ('COMEDY',HORROR);
+
+* BETWEEN CMD
+= SELECT * FROM movies WHERE year BETWEEN 1999 AND 2000;
+Equivalent to in between a range but we have to check the lowvalue and high value
+ SELECT * FROM movies WHERE year BETWEEN 2000 AND 1999;
+ thenn it will give a empty set
+ 
+* HAVING 
+where is used on individual rows and having is applied on groups
+if we dont have group by having is same as where
+// having is applied after grouping , where is applied before grouping
+// FIND OUT ALL THE yEARS in WHich 1000>movies are releases
+SELECT years, COUNT(years) year_count FROM movies GROUP BY years HAVING year_count>1000;
+
+SELECT year, COUNT(years) years_count FROM movies WHERE rank>9 GROUP BY years HAVING years_count>1000;  
+
+* LIMIT CMD
+= 
+//suppose we want only first 20 rows
+SELECT year, name FROM movies LIMIT 20
+
+* OFFSET
+= how many rows from the start you wantr to ignore
+// suppose in a webpage in our page 3 we want 40-60 rows from our table, or we want to ignore the first 40 rows and then get 20 rows 
+SELECT * FROM movies LIMIT 20 OFFSET 40
+
+* ORDER BY CMD
+= It is used to sort the data , and for descending order we use DESC after applying ORDER BY
+
+// select the top 10 movies in their descending year
+SELECT movie FROM movies ORDER BY year DESC LIMIT 10
+
+* EXISTS
+= It return true if a subqueirey return 1 or more values or not a empty set else it return false
+
+* ALL
+= returns true if the all the values in the set whihc is returned after the sub query meets the conditions stated
+Ex:- SELECT * FROM movies WHERE rankscore >= ALL (SELECT MAX(rankscore) FROM movies);
+
+* ANY
+= returns true if any of the values in the set whihc is returned after the sub query, meets the conditions stated
+Ex:- SELECT * FROM movies WHERE rankscore >= ANY (SELECT MAX(rankscore) FROM movies);
+get all the movies whose rankscore >= maximum rankscore 
+
+C-related subqueries:- & query withing a query where we have doing that operation again and again, and query optimizer may or may not optimi=ze the operation,more redable than some complex JOIns,
+Ex:- SELECT emp_no,name FROM employees emp WHERE salary> (SELECT AVG(salary) FROM employees WHERE department = emp.department);
+
+***JOINS
+t1 columns, c1,c2....
+t2 c2cc6..
+left c1,c5,c3 && right c4,c2,c6   combined c1,c2,c3,c4,c5,c6
+* INNER JOIN
+= If we have table1 as T1 & Table 2 as T2 THEN INTERVSECTION the intersection of their columns along with the common rows wil be outputd
+
+SELECT * FROM T1 JOIN T2 ON T1.C1 = T2.C2; || SELECT * FROM T1 INNER JOIN T2 ON T1.C1 = T2.C2;  // Intersection of c1 from t1 & c2 from t2 
+
+* LEFT OUTER JOIN
+= get all the values in left column and join it with right column and where it has same values fill the values of right and where it is not then place NULL their
+Ex:- SELECT * FROM T1 LEFT OUTER JOIN T2 ON T1.C1 = T2.C2; || SELECT * FROM T1 LEFT JOIN T2 ON T1.C1 = T2.C2; // all values of left column with intersection of right column values
+
+* RIGHT OUTER JOIN
+= get all the values in left column and join it with right column and where it has same values fill the values of left and where it is not then place NULL their
+Ex:- SELECT * FROM T1 RIGHT OUTER JOIN T2 ON T1.C1 = T2.C2; || SELECT * FROM T1 RIGHT JOIN T2 ON T1.C1 = T2.C2; // all values of left column with intersection of right column values
+
+* FULL OUTER JOIN
+= Its union of everything and if we are not able to find some same value in the column then place NULL their, its same as union of left outer join and right outer join
+SELECT * FROM T1 FULL OUTER JOIN T2 ON T1.C1 = T2.C2;
+  
+* Natural JOin
+= A join where we have same column name across two tables,after joining the tables only a single column will exist with the same name
+Ex:- T1 :- c1,c2
+T2:- c1,c3,c4
+SELECT * FROM T1 JOIN T2; || SELECT * FROM T1 JOIN T2 USING (c1);
+crtes a table wiht columns c1,c2,c3,c4, no need to use ON clause
+
+* K-joins
+SELECT a.first-name, a.last_name FROM actors a JOIN roles r ON a.id=r.actor_id JOIN movies m ON m.id=r.movie_id AND m.name='Officer 444';
+ joins are computationally most expensive
+ 
+* what is a alias?
+Suppose i want to sort by the count of year, and i use order by and i used the aggreater COUNT(year) then it wont work because it is aggregator opertor keyword, thus we have to use some other name for that to work, and we simply use a alias(year_name). 
+= SELECT year, COUNT(year) year_name FROM movies GROUP BY year ORDER BY year_name;
 
 What is DBMS?
 Why we use DBMS?
