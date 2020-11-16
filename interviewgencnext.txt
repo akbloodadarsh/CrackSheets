@@ -165,6 +165,92 @@ Can you explain the difference between Multiple Inheritance and Multilevel Inher
 *What is Operating System?
 = It acts as a resource manager(process,memory management),provides security & maintainence(their are daemons runnning in the background) provides convinence and gives us utilities,can be used even by someone from a non technical background and suppose a programmer writes some code in some programming language then like:- printf and we run that then we dont need to worry about how operating system displays the otput on the screen, and if a non technical is using chrome to browse internet , then os provides its resources and help it to connect to wifi using NIC, and the user need not to worry about how is it connecting, and if we want to search some file or app then we type its name and os finds it for us 
 
+* what are interrupts?
+= Interrupt is a signal emitted by hardware or software when a process or an event needs immediate attention. It alerts the processor to a high priority process requiring interruption of the current working process. In I/O devices one of the bus control lines is dedicated for this purpose and is called the Interrupt Service Routine (ISR).When a device raises an interrupt at lets say process i, the processor first completes the execution of instruction i. Then it loads the Program Counter (PC) with the address of the first instruction of the ISR. Before loading the Program Counter with the address, the address of the interrupted instruction is moved to a temporary location. Therefore, after handling the interrupt the processor can continue with process i+1.While the processor is handling the interrupts, it must inform the device that its request has been recognized so that it stops sending the interrupt request signal. Also, saving the registers so that the interrupted process can be restored in the future, increases the delay between the time an interrupt is received and the start of the execution of the ISR. This is called Interrupt Lattency.
+
+* UNI VS Multi Programming
+= One program execute at a time in UNi programming, which lead s to huge wastgae of resources.
+Multiple programming the operating system simply switches to, and executes, another job when current job needs to wait. ,& the concept of context switching is used,& its a ssingle cpu concept,multiple programs are stored in the ram and when a program is waiting because of the interupt, we can execute some other program at that time, to use the resources efficiently.The idea is to reduce the CPU idle time for as long as possible..Ex:- If supposse proram 1 generates calls a interrupt,Interrupt service routine and waiting for input from the keyboard, insetead of sitting ideal, the processor starts executing some other program and when the user will input something from the key board it starts executing pragram 1 again. 
+
+* multiprogramming vs multitasking
+= multiprogramming was a unix terminology & multitasking was something that is a extension of multiprogramming, as in multitasking the context switching & timesharing is used,this happens so fast that the users can interact with each program while it is running & the user feels like all the tasking are happening concurrently.
+
+* Preemptive VS Non premptive
+= Premptive means forcefully take control of something, & in context of OS, it means force a process to give the control of resources in CPU.The executing process in preemptive is interrupted in the middle of execution when higher priority one comes so OS allocates the resources to the higher priority one
+
+nON Premptive:- Process has to give away control itself, Ex:- after completion of the process, or between interrupt,
+
+* PSW program status word
+= It determines the statu of the registers & mode of execution, ex:- whether its in user mode(0) or kernel mode(1). 
+
+* user-mode vs kernel-mode
+= user-mode:- It is preemptive means when a higer priority prcess comes then the control can be pased to it, forcefully.& in program status word it is denoted by 0.
+
+kernel-mode:- It is non-premptive means thats when it is executing, the program either has to give control by itself and this happens only when the program completes exectution or when a interrupt happens.& in program status word it is denoted by 1. & the program can jump for user mode to kernel mode.
+
+* fork():-
+= this is a system call and is present in unistd.h header file & is used to creatre a new process or create a child process of the current program and it is a function call & retrun the id of a child process
+Ex:- This can only run in unix based os && their is a command in windows os called spawn which does the same thing but i havent tried in windows 
+
+Process 1
+#include<unistd.h>
+int main()
+{
+	printf("hello");  /// this is user mode
+	fork();   /// this generates another process   & this is a system call which is in kernel mode thus process 2 is executed first
+	printf("world");    // <---- after execution of the prcess 2 the program continues from here
+	reutrn 0;
+}
+ 
+Process 2
+#include<unistd.h>
+int main()
+{
+	printf("hello");
+	fork();
+	printf("world");    /// process 2 starts from here even thought he whole program is copied
+	reutrn 0;
+}
+
+O/P    hello world world
+
+Ex 2 :-
+	
+	Process 1
+#include<unistd.h>
+#include<stdio.h>
+int main()
+{
+	int process_id,value = 0;
+	process_id = fork();   /// this generates another process   & this is a system call which is in kernel mode thus process 2 is executed first && this return the prcessid of child process
+	printf("process_id:- %d\n",process_id);    // <---- after execution of the prcess 2 in previous fork the program 1 continues from here
+	if(process_id>0)printf("value = %d",value+5);  // this means the current process is parent , & this line is executed in process 1
+	else if(process_id==0)printf("value = %d",value-5); 
+	reutrn 0;
+}
+ 
+Process 2
+#include<unistd.h>
+#include<stdio.h>
+int main()
+{
+	int process_id,value = 0;
+	process_id = fork(); // this fork is not called this means the porgram started after this line thus by default this will have value 0 which means this is in final child process 
+	printf("process_id:- %d\n",process_id);    // <---- the execution of the prcess 2 starts from here
+	if(process_id>0)printf("value = %d",value+5);
+	else if(process_id==0)printf("value = %d",value-5);   // this will be executed in child process
+	reutrn 0;
+}
+
+O/P    
+process_id:- 25220   // this can be any other value too
+value = 5
+process_id:- 0
+value = -5
+
+
+
+
 Difference between Process and Threads.
 What is processor?
 What is microprocessor?
@@ -177,12 +263,67 @@ What is the difference between a processor and an OS?
 
 
 **************************DBMS*****************************
+**********USE ACTUAL QUERIES FOR TUTORIALS--------
+
+
+* What is database?
+= so what makes database differnet from traditional way of storeing and retrieveing or performing operations on data in file system is that database use various concepts like indexing,queriey optimizer etc, which makes it way faster , to make operations like updation,deletion, modfifyication,insertipon,deletion way faster,than a tradition file system. A database is a collection of related data which represents some aspect of the real world. A database system is designed to be built and populated with data for a certain task.
+
+*What is DBMS? What are the different types of DMBS?
+= Database Management System (DBMS) is a software for storing and retrieving users' data while considering appropriate security measures. It consists of a group of programs which manipulate the database. The DBMS accepts the request for data from an application and instructs the operating system to provide the specific data. In large systems, a DBMS helps users and other third-party software to store and retrieve data.
+DBMS allows users to create their own databases as per their requirement. The term “DBMS” includes the user of the database and other application programs. It provides an interface between the data and the software application. 
+Types:-
+1) Centralized Database
+2) Distributed Database
+3. NoSQL Database
+4. Cloud databse
+5. Object-oriented Databases
+6. Hierarchical Databases
+7. Network Databases
+8. Personal database
+9. Operational Database
+10. Enterprise Database
+
+* DBMS
+DBMS applications store data as file.
+In DBMS, data is generally stored in either a hierarchical form or a navigational form.
+Normalization is not present in DBMS.
+DBMS does not apply any security with regards to data manipulation.
+DBMS uses file system to store data, so there will be no relation between the tables
+DBMS has to provide some uniform methods to access the stored information.
+DBMS does not support distributed database.
+DBMS is meant to be for small organization and deal with small data. it supports single user.
+Examples of DBMS are file systems, xml etc.
+
+* RDBMS
+RDBMS applications store data in a tabular form.
+In RDBMS, the tables have an identifier called primary key and the data values are stored in the form of tables.
+Normalization is present in RDBMS.
+RDBMS defines the integrity constraint for the purpose of ACID (Atomocity, Consistency, Isolation and Durability) property.
+in RDBMS, data values are stored in the form of tables, so a relationship between these data values will be stored in the form of a table as well.
+RDBMS system supports a tabular structure of the data and a relationship between them to access the stored information.
+RDBMS supports distributed database.
+RDBMS is designed to handle large amount of data. it supports multiple users.
+Example of RDBMS are mysql, postgre, sql server, oracle etc.
+
+*Why we use RDBMS?
+= Multi-user access	It does not support multi-user access
+Design to fulfill the need for small and large businesses
+Remove redundancy and Integrity
+Expensive. But in the long term Total Cost of Ownership is cheap
+Easy to implement complicated transactions. 
+
+
 * What is SQL?
-= Structured query language, it started as a research project at IBM ,by boyee and codd, it has became a standard way to query, update, delte, modigy or insert in a database. It is a domain specific language, means that it can be only in database, ex:- we cant build a OS,webiste etc using sql, declatirve programming language,
+= Structured query language, it started as a research project at IBM ,by boyee and codd, it has became a standard way to query, update, delte, modigy or insert in a database. It is a domain specific language, means that it can be only in database, ex:- we cant build a OS,webiste etc using sql, declatirve programming language
+
 * What is the candidate key?
 = A subset or a set of superkey attributes from whihc we can determine all the attributes is known as candiate key or a minimal attribute super key is called a candidate key,ex:- Super keys:- {A, bc} from which we can determine all the attributes then A will be the candidate key because it has minimum attributes from whihc we can dtermine all the other attributes or the closure of A+ can determine all the other attributes. Always check if their exist a subset of superkey by whihc if we find the closure of the subset of superkey if we are getting all the attributes or not.
 
 IMP :- and we have to keep in mind one thing that if their exist a attribute whihc is not reachable by any functional dependency then we have to consider that in every candiate key.
+
+* what is schema?
+= How the data is organized & what are the tables and its relation between them
 
 * What is super key?
 = A subset or a set of attributes from whihc we can determine every other attribute then it is called a superkey.Ex:- Attributes a,b,c,d,e  and assume AB is superkey then their exist some functional dependency among the attribtes by whihc which when using Ab as super key we can determine every attribute.  
@@ -192,13 +333,12 @@ IMP :- and we have to keep in mind one thing that if their exist a attribute whi
   If X->C :- Non Trivial  When RHS is not a subset of LHS
    
 * Cascade:- 
-= It is used in conjunction with ON DELETE or ON UPDATE. It means that the child data is either deleted or updated when the parent data is deleted or updated.It is used in conjunction with ON DELETE or ON UPDATE. It means that the child data is set to NULL when the parent data is deleted or updated.
+= It is used in conjunction with ON DELETE or ON UPDATE. It means that the child data is either deleted or updated when the parent data is deleted or updated.It is used in conjunction with ON DELETE or ON UPDATE. It means that the child data is set to NULL when the parent data is deleted or updated. A foreign key with cascade delete means that if a record in the parent table is deleted, then the corresponding records in the child table will automatically be deleted.
+Ex:- 
+CREATE TABLE products( product_id INT PRIMARY KEY,product_name VARCHAR(50) NOT NULL,category VARCHAR(25));
 
-* what is schema?
-= How the data is organized & what are the tables and its relation between them
+CREATE TABLE inventory(inventory_id INT PRIMARY KEY, product_id INT NOT NULL,quantity INT, min_level INT, max_level INT, CONSTRAINT fk_inv_product_id FOREIGN KEY (product_id) REFERENCES products (product_id) ON DELETE CASCADE);
 
-* What is database?
-= so what makes database differnet from traditional way of storeing and retrieveing or performing operations on data in file system is that database use various concepts like indexing,queriey optimizer etc, which makes it way faster , to make operations like updation,deletion, modfifyication,insertipon,deletion way faster,than a tradition file system.
 
 SQL-> PARSER,compiler -> query optimizer
 parser:- breaks the queirey in chunks and tries to understand instruction then complier compiles it insome language like c,c++, java or in whihc the db it is writeen internally,
@@ -255,6 +395,7 @@ INDEX :- used to create and retrieve data from the database very quickly
 * DROP
 removes table along wiht all the data permananetly
 = DROP TABLE tablename;
+= DROP DATABASE database name;
 = DROP TABLE tablename IF EXISTS;
 
 * TRUNCATE
@@ -440,40 +581,111 @@ SELECT a.first-name, a.last_name FROM actors a JOIN roles r ON a.id=r.actor_id J
 Suppose i want to sort by the count of year, and i use order by and i used the aggreater COUNT(year) then it wont work because it is aggregator opertor keyword, thus we have to use some other name for that to work, and we simply use a alias(year_name). 
 = SELECT year, COUNT(year) year_name FROM movies GROUP BY year ORDER BY year_name;
 
-What is DBMS?
-Why we use DBMS?
-. Write a query to get the second highest number from the student_marks table.
-What is view?
-If Serial no. has to be Primary Key in a Database, should it be stored in a varchar or number datatype.
- (SQL, Joins, Triggers, Stored Procedures, Normalization).
-Employee table and explain how 1st normalization to BCNF has to applied on the table.
-What is the difference between primary key and unique constraints? why are they called unique constraints?
-Questions were on queries like find 2nd highest salary of employee, Views and its types, Normalisation, etc.
-What is ACID property?
-Update & Select query in DBMS
-How to search any query in DBMS?
-Write a query to find out the second largest salary from employee table.
- What is the primary key?
-  What is BCNF?
-  What is ACID Property ??
-Explain the meaning of each term in ‘ACID’ .
-Give one real life example of ‘D-Durability’ ??
+*Write a query to get the second highest number from the student_marks table.
+= SELECT marks FROM student_marks ORDER BY marks DESC LIMIT 1 OFFSET 1
+https://sqlzoo.net/wiki/SELECT_basics
+
+* What is view?
+= In SQL, a view is a virtual table based on the result-set of an SQL statement. A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database. You can add SQL functions, WHERE, and JOIN statements to a view and present the data as if the data were coming from one single table. Types:-
+=Dynamic views can contain data from one or two tables and automatically include all of the columns from the specified table or tables. Dynamic views are automatically updated when related objects or extended objects are created or changed. 
+=Static views can contain data from multiple tables and the required columns from these tables must be specified in the SELECT and WHERE clauses of the static view. Static views must be manually updated when related objects or extended objects are created or changed.
+Ex:- 
+CREATE VIEW [Brazil Customers] AS SELECT CustomerName, ContactName FROM Customers WHERE Country = 'Brazil';
+SELECT * FROM [Brazil Customers];
+CREATE OR REPLACE VIEW [Brazil Customers] AS SELECT CustomerName, ContactName, City FROM Customers WHERE Country = 'Brazil';
+DROP VIEW [Brazil Customers]
+
+* If Serial no. has to be Primary Key in a Database, should it be stored in a varchar or number datatype.
+= Both are acceptable, but key has to be unique everytime. 
+
+* Triggers
+= Triggers are stored programs, which are automatically executed or fired when some events occur. Triggers are, in fact, written to be executed in response to any of the following events − DML,DDL,DCL
+Triggers can be defined on the table, view, schema, or database with which the event is associated.
+Use:-
+Generating some derived column values automatically
+Enforcing referential integrity
+Event logging and storing information on table access
+Auditing
+Synchronous replication of tables
+Imposing security authorizations
+Preventing invalid transactions
+
+CREATE OR REPLACE TRIGGER display_salary_changes 
+BEFORE DELETE OR INSERT OR UPDATE ON customers 
+FOR EACH ROW 
+WHEN (NEW.ID > 0) 
+DECLARE 
+   sal_diff number; 
+BEGIN 
+   sal_diff := :NEW.salary  - :OLD.salary; 
+   dbms_output.put_line('Old salary: ' || :OLD.salary); 
+   dbms_output.put_line('New salary: ' || :NEW.salary); 
+   dbms_output.put_line('Salary difference: ' || sal_diff); 
+END; 
+
+
+
+* Employee table and explain how 1st normalization to BCNF has to applied on the table.
+= First all the data should be in col & rows and the row and colums data does not have any repeating columns, then we remove any partial dependence by creating seperate tables for the attribut due to whihc it is occuring, and set at least one of attributes as the primary key in of that specific table,,and the remaining attributes are dependent on the primary key, and then we will remove the transitive dependencey , if we have any then finally we check that in every dependence our left side is superkey
+
+* What is the difference between primary key and UNIQUE constraints? why are they called unique constraints?
+= primary key should be able to access all the rows and UNIQUE constriant can be used for all the columns to check if the data we are storing in a column is alwyas unique and the column dosne thave to be a primary key colmn it can be used for any column, and jsut as primary key we have to specify in whihc column we want the data to be unique. and the column dosnet have to be apart of a primary key. 
+
+* prime vs non-prime attribute
+= prime attributes is part of a candidate key, & non prime is not part of a candidate key
+
+* transaction
+= A transaction is a single logical unit of work which accesses and possibly modifies the contents of a database. Transactions access data using read and write operations.
+
+* What is ACID property?
+= Atomicity - A entire transaction takes place at once or dosent happen at all.  a transaction to transfer funds from one account to another involves making a withdrawal operation from the first account and a deposit operation on the second. If the deposit operation failed, you don’t want the withdrawal operation to happen either.
+
+Consistency - A database must be consistent before and afer the  transaction. a database tracking a checking account may only allow unique check numbers to exist for each transaction
+
+Isolation - multiple transaction happen independently without interferance. a teller looking up a balance must be isolated from a concurrent transaction involving a withdrawal from the same account. Only when the withdrawal transaction commits successfully and the teller looks at the balance again will the new balance be reported.
+
+Durability - the changes of a successful transaction occur even if the system failure occurs.  A system crash or any other failure must not be allowed to lose the results of a transaction or the contents of the database. Durability is often achieved through separate transaction logs that can "re-create" all transactions from some picked point in time (like a backup).
+
+* What is the super key?
+= A super key can be a set of attributes which cna be used to identify ebeyr row uniquely. All super keys can’t be candidate keys but its reverse is true. SUPER KEY can be NULL;
+
+* What is the candidate key?
+= A minimum number of attributes required to identigy each row uniquely,or a minimal super key is candidate key,their can be multiple candidate keys. A candidate key can be NULL.
+
+* What is the primary key?
+= A primary keey is a candidate key which databse admin choose for a specific table. Primary key cant be NULL.
+
+* what is a foreign key?
+= A FOREIGN KEY is a key used to link two tables together, a field (or collection of fields) in one table that refers to the PRIMARY KEY in another table. The table containing the foreign key is called the child table, and the table containing the candidate key is called the referenced or parent table. The FOREIGN KEY constraint is used to prevent actions that would destroy links between tables. The FOREIGN KEY constraint also prevents invalid data from being inserted into the foreign key column, because it has to be one of the values contained in the table it points to.
+
+
 * how to do normalization?
 = first find out all candiate keys, then write down all the prime attributes, check its in 2 nf, no part of a candite key is detrmining a non prime attribute, then remove any transitive dependancey, by giving them a seperate relation or table, and making them the superkey for that table
+
 * What is Normalization ?
 = Decomposition of set of attributes to minimize redundancy in such a way that relation function dependanccey between attributes remains lossless & reduce anomalies.
+
+* why we do normalization?
+= The primary purpose of the normalization is to reduce the data redundancy i.e. the data should only be stored once. This is to avoid any data anomalies that could arise when we attempt to store the same data in two different tables, but changes are applied only to one and not to the other.
 
 * What are the anomalies of Normalization?
 = Insertion, update and deletion anomaly. when not in 1NF,2NF----4NF
 
 *Types of Normalization?
-= 1NF:- Their is no multivalued attribute, if their is then split it into seperate rows.
+= 1NF:- an entity that does not have any repeating columns or data groups can be termed as the First Normal Form. In the First Normal Form, every column is unique.Their is no multivalued attribute, if their is then split it into seperate rows.
+
 2NF :- When their exist no part of a candiate key determininga non prime attribute,partial dependencey(part of a candidate key or proper subset determines some other attribute other than itself) and relation is in 1NF, if their exist PD, then remove it by creating another relational table.
+all non-key attributes are fully functional dependent on the primary key
+
 3NF:- For all non-trivial FD, When X->Y WHERE Y is a prime attribute then we have to remove that, & we are in 2NF.All prime attribute must depend on a s-key. no non prime attribute is transitively dependant ona key. No non prime attribute is depending a non prime attribut.
 Ex:- X->Y, Y->Z, Z->A
 NOTE:- Either X->Y   , either X is a superkey or Y is a prime attribute
+
 **BCNF= Every FD X->Y , x is a superset of & Y its subset, (trivial) & X is superkey, Every BCNF is in 3 NF. or X->Y then either X has to be a super key or Y has to bea prime attribute
 Note:- X->Y , X is auper key
+-Fourth Normal Form (4 Normal Form):- A relation will be in 4NF if it is in Boyce Codd normal form and has no multi-valued dependency.
+By definition, a table is in Fourth Normal Form, if it does not have two or more, independent data describing the relevant entity.
+-Fifth Normal Form (5 Normal Form) :- A table can be considered in Fifth Normal Form only if it satisfies the conditions for Fourth Normal Form and can be broken down into multiple tables without loss of any data. A relation is in 5NF if it is in 4NF and not contains any join dependency and joining should be lossless.
 
 ** Achievabilty of BCNF
 we cannot always gaurantee 
@@ -482,30 +694,74 @@ R(ABC)     FD{AB->C,C->B}
 R1(AB)  =  {AB}
 R2(CB)  = {CB}
 
-What is Primary Key and Foreign Key ??
-If you are given employee name, employee salary, employee id, then
-Create a table through SQL query.
-What is DBMS?
-5. What are the different types of DMBS?
-6. What is RDBMS?
-7. What is the difference between RDBMS and DBMS?
-8. What is MySQL? Is it RDBMS or DBMS?
-9. How we store data in RDBMS?
-10. RDBMS also store data in .sql format file. So how can we differentiate the file of DBMS and RDBMS?
-11. What is Primary Key? How it is different from Unique Key?
-12. What is Foreign Key and How we use it to create connection between tables?
-13. What are attributes?
-14. What are the different types of SQL Languages? Explain them briefly with examples.
-15. Where we can use CREATE command? Write a query using CREATE.
-16. Now, use CREATE command to create something else except these two (TABLE and DATABASE).
-Explain Normal Forms
-12.Sql Queries
-What is the Difference between Delete and Truncate ??
-If you have to delete employee id – 400 from employee table, then
-How will you delete it ?? Write its SQL query.
-Java OOPS, Database Tables and SQL Queries,
+Example of bcnf:-
+EMP_ID   →    EMP_COUNTRY  
+EMP_DEPT   →   {DEPT_TYPE, EMP_DEPT_NO}  
+Candidate keys:
+
+For the first table: EMP_ID
+For the second table: EMP_DEPT
+For the third table: {EMP_ID, EMP_DEPT}
+
+Now, this is in BCNF because left side part of both the functional dependencies is a key.
+
+
+* If you are given employee name, employee salary, employee id, then Create a table through SQL query.
+= create functional dependency first then think of a table and do normalisation and then jump onto queries
+
+* examplw of dbms
+= xml file
+
+* What is MySQL? Is it RDBMS or DBMS?
+= MySQL Database Service is a fully managed database service to deploy cloud-native applications using the world's most popular open source database. and it is rdbms.
+
+* How we store data in RDBMS?
+= An RDBMS is a DBMS which manages a relational database. A relational database stores data in tables. Tables are organized into columns, and each column stores one type of data (integer, real number, character strings, date, …). 
+
+* RDBMS also store data in .sql format file. So how can we differentiate the file of DBMS and RDBMS?
+= The key difference is that RDBMS (relational database management system) applications store data in a tabular form, while DBMS applications store data as files. Does that mean there are no tables in a DBMS? There can be, but there will be no “relation” between the tables, like in a RDBMS
+
+* What is Primary Key? How it is different from Unique Key?
+= primary key Unique identifier for rows of a table,
+Unique identifier for rows of a table when primary key is not present
+primary Cannot be NULL,unique Can be NULL
+Only one primary key can be present in a table,	Multiple Unique Keys can be present in a table
+Selection using primary key creates clustered index	Selection, using unique key creates non-clustered index
+
+* What are attributes?
+= an attribute refers to a database component, such as a table. It also may refer to a database field. Attributes describe the instances in the column of a database.
+
+* What are the different types of SQL Languages? Explain them briefly with examples.
+= Data manipulation langauage= SELECT, INSERT, UPDATE, DELETE
+DATA DEFINITION LANGUAGE = CREATE,ALTER (ADD, MODIFY DROP),TRUNCATE
+DATA CONTROL LANGUAGE = GRANT , REVOKE
+
+* Where we can use CREATE command? Write a query using CREATE.
+= To create, table, view, databse:- 
+CREATE VIEW [brazil customer] AS SELECT amount FROM Customers WHERE country='Brazil'; 
+CREATE TABLE customers(cusid INT, lang VARCHAR(50))
+CREATE DATABASE db;
+CREATE TABLE tname (id INT PRIMARY FOREIGN, lang VARCHAR(50) NOT NULL)
+
+* What are sql queries?
+= A query is really a question or request for data. Structured Query Language SQL),is used to do various operations on data.
+
+* What is the Difference between Delete and Truncate ?
+= 
+					Delete 														Truncate
+Basic           It is used to delete specific data  		    It is used to delete the entire data of the table 
+Where clause  	We can use with where clause 					It can’t be used with where clause 
+Locking		    It locks the table row before deleting the row 	It locks the entire table 
+Rollback 		We can rollback the changes.					We can’t rollback the changes 
+Performance  	It is slower than truncate 						It is faster than delete 
+
+* If you have to delete employee id – 400 from employee table, then.How will you delete it ?? Write its SQL query.
+= DELETE FROM employee WHERE empid=400;
 
   
+
+
+
 
 *****************************Computer network*********************************
 Can you explain me what is a cloud?
@@ -517,13 +773,17 @@ What is a repeater?
 *************HR************
 * tell something about yourself?
 = Good evening everyone & thank you for giving me this opportunity. So my full name is adarsh kunwar and im currently pursuing Btech from GEU & my branch is CS.
-I'm a CS enthusiast & I really enjoy participating in coding challenges, create projects,& I really like to read & write articles, editorials & creating educational videos. & all these activities have really helped me grow my skills,& knowledge & I'm a compassionate & cooperative person & I like to take a planned approach towards a problem,& if I'm working in a team with a goal to solve a problem, I like to hear all sides & then take the most efficient approach which can be applied at the moment. & that's about it.	
+I'm a CS enthusiast & I really enjoy participating in coding challenges, create projects,& I really like to read & write articles, editorials & creating educational videos. & all these activities have really helped me grow my skills,& knowledge & I'm a compassionate & cooperative person & I like to take a planned approach towards a problem,& if I'm working in a team with a goal to solve a problem, I like to hear all sides & then take the most efficient approach which can be applied at the moment. & that's about it. 
 
 Tell me about the project you have done
 What do you know about cognizant. 
- Who motivates you the most?Who motivates you the most?
- Three take away from IIT Patna, etc.
- talk about about my strengths and weaknesses.
+* Who motivates you the most?Who motivates you the most?
+= 
+ 
+* Three take away from IIT Patna, etc.
+
+* talk about about my strengths and weaknesses.
+= I think its that when i do some project or after doing coding questions for hours, or after participating in coding challenges or after learning some new approach to solve some problems, and after putting in all that effort,and when i get free, then i want to go out on weekends, and maybe go hangout with friends, or when i wanna go see some movie,or buy a gaming cosole or install windows to play games, and i want to do something else,but I know that this thing im doing is going to bring me most value, and that moment when i decide to sit down to learn more, no one's forcing me to do that, their is no pressure on me, its somethig deep down that i know that I want to do,watch the code, wathc the videos learn from articles and do all that,I have that mindset, I have that resourcefulness and thats a skill, and its not something I had before but I developed over the past years and my weakneess  
 asked about my day
 Why do you want to join cognizant?
 14. How cognizant will help you to improve your skill?
