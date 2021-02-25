@@ -1,0 +1,1653 @@
+Technical Round
+
+****************************ABOUT PROGRAMMING LANGUAGES*****************
+**************C++
+* What is inline function 
+= https://www.geeksforgeeks.org/inline-functions-cpp/
+
+* pointer vs refrence
+= https://www.geeksforgeeks.org/pointers-vs-references-cpp/
+
+* structure vs class
+= 
+
+*****************************General***********************
+* What’s your favorite subject?
+= DSA,OOPS,C++
+
+* procedural programming language:-Procedural programming follows top down approach.Procedural programming does not have any proper way for hiding data so it is less secure.In procedural programming, overloading is not possible.
+= follows, in order, a set of commands.we have given a step by step instruction like c,java,ex:- we want to print every line from a file in c languages we have to write that how we will access the file and retirve the data from it, but in declatrive programming langye we say what we want, and we dont state how to get it,like sql we dirctly write what data we wnat to obtain from which table.Ex:- select moviename from movies where year>2000, no for loops is used etc..
+
+* When I see a new emerging technology, how I research about it? Explain one technology I have recently researched about.
+=
+
+* Which is the most important stage in SDLC?
+= each and every stage in sdlc is importnat, if we remove one step in cycle the their is a chance that the product will crash.
+
+* Who invented Java
+= James Gosling
+
+* Is it possible to call one constructor from another in Java?
+= Yes, any number of constructors can be present in a class and they can be called by another constructor using this() [Please do not confuse this() constructor call with this keyword]. this() or this(args) should be the first line in the constructor. This is known as constructor overloading.
+
+* What was the name of java before named “java”
+= The language was initially called Oak after an oak tree that stood outside Gosling's office. Later the project went by the name Green and was finally renamed Java, from Java coffee, the coffee from Indonesia.
+
+* How to run a java program
+= From Terminal install open jdk sudo apt-get install openjdk-7-jdk. Write a java program and save the file as filename.java.Now to compile use this command from the terminal javac filename.java.To run your program that you've just compiled type the command below in terminal: java filename.
+
+* why we need java as we have c, c++
+= We need Java because it vastly increases the abstraction level, so developers do not need to worry about memory management and safety, garbage collection etc. So we can focus on the work and therefore increase our productivity. One is the use of bytecode and the desire to have a write once, run anywhere language.
+
+* Software Development Life Cycle?
+= Software Development Life Cycle (SDLC) is a process used by the software industry to design, develop and test high quality softwares. The SDLC aims to produce a high-quality software that meets or exceeds customer expectations, reaches completion within times and cost estimates.
+
+*What are the different stages in it?
+= Feasibility study:- possible to make software or not
+1. Planning and Requirement Analysis SRS (Software Requirement Specification) document to Defining Requirements
+3. Designing the Product Architecture Design Document Specification. This DDS is reviewed by all the important stakeholders and based on various parameters as risk assessment, product robustness, design modularity, budget and time constraints, the best design approach is selected for the product.
+4. Building or Developing the Product
+5. Testing the Product
+6.  Deployment in the Market and Maintenance
+
+* how hashing works and its uses.
+= An element is converted into an integer by using a hash function. This element can be used as an index to store the original element, which falls into the hash table. The element is stored in the hash table where it can be quickly retrieved using hashed key.
+
+* What are the different Life Cycle Model?
+= SDLC models followed in the industry −
+Waterfall Model
+Iterative Model
+Spiral Model
+V-Model
+ITerative waterfall model
+Agile
+Dvops
+Big Bang Model
+
+* Which one of them is best and why?
+= 
+
+* What is the difference between concatenation of strings using ‘+’ and Stringbuffer. Advantages and Disadvantages of both and the instances where one would perform better than the other.
+= String class is immutable thus when you concat too many strings because every time it creates new instance,it is slow.
+
+* Briefly explain about Java
+= orcale is responsible for maintancenc and improvement, it is 99% oops and 1 % is becuas of primitve datatyep. passed in refrence, contians packages mroe than 1200
+
+* what happens if we don’t use static in main method?
+= jvm dosent create a insance of the class, and it simply use the class name abnd call main emthod, jvm dosnt do that so it dosnt create a onstance of the class, and initialize the variable using constusctor if available.
+
+
+********************Coding******************* 
+* Given a set of numbers how would you find two numbers in O(n) time such that their sum is exactly n ?
+=
+
+* Can you write a simple program which uses Multiple Inheritance in C++?
+= The constructuctor are always called as first its gonna call the inherited classes constructors first and then at time of destruction its gonna call it in reverse
+class A {
+	A()
+	{
+		cout<<"Show A";
+	}
+};
+class B {
+	B()
+	{
+		cout<<"Show B";
+	}
+};
+class C : public A, public B {
+	C()
+	{
+		cout<<"Show C";
+	}
+};
+int main()
+{
+	C obj;
+	obj;
+	return 0;
+}
+
+O/P
+Show A
+Show B
+Show C
+
+* The diamond problem
+The diamond problem occurs when two superclasses of a class have a common base class. For example, in the following diagram, the TA class gets two copies of all attributes of Person class, this causes ambiguities. The solution to this problem is ‘virtual’ keyword.
+
+* There are 2 ways to avoid this ambiguity:
+= Use scope resolution operator
+Use virtual base class
+
+* Modes of Inheritance
+= Public mode: If we derive a sub class from a public base class. Then the public member of the base class will become public in the derived class and protected members of the base class will become protected in derived class.
+Protected mode: If we derive a sub class from a Protected base class. Then both public member and protected members of the base class will become protected in derived class.
+Private mode: If we derive a sub class from a Private base class. Then both public member and protected members of the base class will become Private in derived class.
+
+* Toughest question which u have solved in Competitive Programming
+
+* Can you tell a Programming Language which uses Procedural Programming.
+= C, 
+
+*Print Pascal's Triangle
+Complexity for Binary Search and Condition to apply Binary Search
+You are given an array of  numbers and some of them occur more than 1 time and not sorted. How would you print only the distinct numbers?
+Find the frequency of the array elements (As the array contains some repetitive elements)?
+Count the numbers of vowels in a string.
+write to reverse the string without using reverse function.
+Reverse the Link list
+Find the sum of boundary nodes of binary tree
+Print link list in reverse.
+Ocount the frequency of character in a given string,
+check whether the given IP address is valid or not.
+Linear and Non linear Data structures.
+* What are Data Structures & why do we use Data structures.
+= a data structure is a data organization, management, and storage format that enables efficient access and modification. data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data. Data structures provide a means to manage large amounts of data efficiently for uses such as large databases and internet indexing services. Usually, efficient data structures are key to designing efficient algorithms.
+
+* write the code for Binary search.
+
+*write code on try-catch-finally, throws.
+=
+
+* Difference between C++ & Java.
+= https://www.javatpoint.com/cpp-vs-java
+
+* Can you write a program to reverse a linked list?
+= 
+
+* Deletion from a tree
+= 
+
+* write a basic program on printing 10 numbers.
+= 
+
+* remove the loop from the Linked List.
+=
+
+* Tree traversal(inorder, preorder, postorder and level-order)
+= 
+
+* Detection of loop in LinkedList
+=
+
+* If loop detected, then find the begin point of loop
+=
+
+* write a program in C for fibonacci series.
+=
+
+* binary search algorithm.
+=
+
+* programming language which included pointers, union, structures, loops.
+= 
+
+* Java use call by value or by reference?
+=
+
+* writer program call by value and call by reference
+=
+
+* Tell me about semaphore? 2
+=
+
+* why use semaphore? 2
+=
+
+* gave me the series 2, 5, 7, 12 ….  and asked me to write a code for it.       
+=
+
+* What is sorting?
+=
+
+* writing a program of any Sorting which you like
+=
+
+* Find third largest element from an array using sorting technique and find the occurrence of the same.Same code using LinkedList or any other data structure except array.
+=
+
+* What is the difference between a stack and a linked list?
+=
+
+* Write a program to sort a list of numbers and find out the second largest number.
+=
+
+* an array of 4 numbers and asked how are they stored in the linked list.
+=
+
+* Write a code to reverse these elements in the linked list.
+=
+
+* What are the two ways by which arguments are passed in C.
+=
+
+
+****************************OOPS********************************
+* Real world example of OOPs Concept
+= https://www.geeksforgeeks.org/understanding-oops-and-abstraction-using-real-world-scenario/
+
+* Abstraction and Encapsulation Difference
+= 
+
+* Virtual Functions in C++
+= https://www.geeksforgeeks.org/virtual-function-cpp/
+
+class Base {
+	public: 
+	virtual void show()
+	{
+		cout<<"Base";	
+	} 
+	void show2() {
+		cout<<"Base";
+	}
+};
+
+class Derived : public Base {
+	public:
+		void show()
+		{
+			cout<<"Derived";
+		}
+		void show2() {
+		cout<<"Derived";
+	}
+};
+
+int main()
+{
+	Base *b = new Derived;
+	b->show();   // Derived
+	b->show2();   // Base
+	return 0;
+}
+
+* Difference between POP and OOP?
+= https://www.geeksforgeeks.org/difference-between-oop-and-pop/
+
+* Which type of inheritance is not supported in Java?
+= Multiple
+
+* Types of Inheritance 
+= 
+
+* Can you explain the concept of Abstraction with an example?
+= Abstraction allows us to expose limited data and functionality of objects publicly and hide the actual implementation. It is the most important pillar in OOPS. In our example of Mobile class and objects like Nokia, Samsung, IPhone.This is called abstraction. In classes, we can create methods that can be called and used by the users of the class but users will have no idea what these methods do internally.
+Some features of mobiles,
+1. Dialing a number call some method internally which concatenate the numbers and displays it on screen but what is it doing we don’t know.
+2. Clicking on green button actual send signals to calling person's mobile but we are unaware of how it is doing.
+ 
+* constructor and destructor
+= https://www.geeksforgeeks.org/c-classes-and-objects/  At bottom
+
+* pure virtual destructor
+= https://www.geeksforgeeks.org/pure-virtual-destructor-c/
+
+* copy constructor
+= https://www.geeksforgeeks.org/copy-constructor-in-cpp/
+
+* Friend
+= https://www.geeksforgeeks.org/friend-class-function-cpp/
+
+* What is Class and Object?
+= https://www.geeksforgeeks.org/c-classes-and-objects/
+
+* Exception Handling
+= https://www.geeksforgeeks.org/exception-handling-c/
+
+* Dangling Pointers
+= https://www.geeksforgeeks.org/dangling-void-null-wild-pointers/
+
+* static in oops
+= https://www.geeksforgeeks.org/static-keyword-cpp/
+
+* What are abstract classes? Can they make objects?
+= 
+
+* Which type of Programming Language is JAVA?
+= 
+
+* What is OOP? What are the features of OOP?
+= https://www.geeksforgeeks.org/object-oriented-programming-in-cpp/
+
+
+
+* We can create how many instance of an abstract class? Explain with an example.
+= None
+
+* what is JDBC ? also connectivity code?
+= 
+
+* Why Java dosn't support Pointer Concepts?
+= 
+
+* aggregation, association, specialization, generalization, IS-A relationship, Encapsulation, Polymorphism
+=
+
+* What is method overloading and overriding?
+= 
+
+What is Object Oriented Programming ?
+What are the features of Object Oriented Programming ?
+* What is Polymorphism and its types ??
+= https://www.geeksforgeeks.org/early-binding-late-binding-c/
+
+Write the code through any example to show polymorphism in your favourite language.     
+5.What is constructor?What is the use of it?What is the return type of constructor?
+6.Explain OOPs Concept
+7.Is “const” keyword exist in java?
+8.Method Overloading and Method Overriding
+9.What are the different types of inheritance?            
+What are classes and objects ?
+Scanner or BufferedReader and Why?
+I: what is the use of static keyword ?
+I: static classes and nested classes.
+I: Do you know about the collection framework? Tell me about HashMap . Tell me about ArrayList, HashSet vs Treeset.
+What is Inheritance?
+What are the types of Inheritance?
+Can you explain the difference between Multiple Inheritance and Multilevel Inheritance?
+
+//////////////// FACTS
+class Base { 
+public: 
+	virtual void show()
+    {
+      cout << "In base \n"; 
+    } 
+}; 
+
+class Derived : public Base { 
+  public:
+  void show()
+    {
+      cout << "In derived \n"; 
+    } 
+}; 
+
+int main(void) 
+{ 
+	Base d; 
+  d.show();
+  Derived c; 
+  c.show();
+	return 0; 
+} 
+
+// O/P
+In base
+In derived
+
+
+* Display of abstract class using virtual
+class Base { 
+public: 
+	virtual void show() = 0;
+}; 
+
+class Derived : public Base { 
+
+}; 
+
+int main(void) 
+{ 
+
+  Derived c; 
+	return 0; 
+} 
+
+// Throw error because if we will not override the show function then the class which inherit the abstracct class will also become abstract and we cannot create aobject of abstract class
+
+///
+class Base { 
+public: 
+	virtual void show() = 0;
+}; 
+
+class Derived : public Base { 
+public: 
+	void show() { cout << "In Derived \n"; } 
+}; 
+
+int main(void) 
+{ 
+	Base* bp = new Derived(); 
+	bp->show(); 
+	return 0; 
+} 
+
+We can use pointers & refrences to access abstract class
+// O/P
+IN derived 
+
+
+**************************OS**************************
+*What is Operating System?
+= It acts as a resource manager(process,memory management),provides security & maintainence(their are daemons runnning in the background) provides convinence and gives us utilities,can be used even by someone from a non technical background and suppose a programmer writes some code in some programming language then like:- printf and we run that then we dont need to worry about how operating system displays the otput on the screen, and if a non technical is using chrome to browse internet , then os provides its resources and help it to connect to wifi using NIC, and the user need not to worry about how is it connecting, and if we want to search some file or app then we type its name and os finds it for us 
+
+* what are interrupts?
+= Interrupt is a signal emitted by hardware or software when a process or an event needs immediate attention. It alerts the processor that a high priority process requiring interruption of the current working process. In I/O devices one of the bus control lines is dedicated for this purpose and is called the Interrupt Service Routine (ISR).When a device raises an interrupt at lets say process i, the processor first completes the execution of instruction i. Then it loads the Program Counter (PC) with the address of the first instruction of the ISR. Before loading the Program Counter with the address, the address of the interrupted instruction is moved to a temporary location. Therefore, after handling the interrupt the processor can continue with process i+1.While the processor is handling the interrupts, it must inform the device that its request has been recognized so that it stops sending the interrupt request signal. Also, saving the registers so that the interrupted process can be restored in the future, increases the delay between the time an interrupt is received and the start of the execution of the ISR. This is called Interrupt Lattency.
+
+* UNI VS Multi Programming
+= One program execute at a time in UNi programming, which lead s to huge wastgae of resources.
+Multiple programming the operating system simply switches to, and executes, another job when current job needs to wait. ,& the concept of context switching is used,& its a ssingle cpu concept,multiple programs are stored in the ram and when a program is waiting because of the interupt, we can execute some other program at that time, to use the resources efficiently.The idea is to reduce the CPU idle time for as long as possible..Ex:- If supposse proram 1 generates calls a interrupt,Interrupt service routine and waiting for input from the keyboard, insetead of sitting ideal, the processor starts executing some other program and when the user will input something from the key board it starts executing pragram 1 again. 
+
+* multiprogramming vs multitasking
+= multiprogramming was a unix terminology & multitasking was something that is a extension of multiprogramming, as in multitasking the context switching & timesharing is used,this happens so fast that the users can interact with each program while it is running & the user feels like all the tasking are happening concurrently.
+
+* Preemptive VS Non premptive
+= Premptive means forcefully take control of something, & in context of OS, it means force a process to give the control of resources in CPU.The executing process in preemptive is interrupted in the middle of execution when higher priority one comes so OS allocates the resources to the higher priority one
+
+nON Premptive:- Process has to give away control itself, Ex:- after completion of the process, or between interrupt,
+
+* PSW program status word
+= It determines the statu of the registers & mode of execution, ex:- whether its in user mode(0) or kernel mode(1). 
+
+* user-mode vs kernel-mode
+= user-mode:- It is preemptive means when a higer priority prcess comes then the control can be pased to it, forcefully.& in program status word it is denoted by 0.
+
+kernel-mode:- It is non-premptive means thats when it is executing, the program either has to give control by itself and this happens only when the program completes exectution or when a interrupt happens.& in program status word it is denoted by 1. & the program can jump for user mode to kernel mode.
+
+* fork():-
+= this is a system call and is present in unistd.h header file & is used to creatre a new process or create a child process of the current program and it is a function call & retrun the id of a child process
+Ex:- This can only run in unix based os && their is a command in windows os called spawn which does the same thing but i havent tried in windows 
+
+Process 1
+#include<unistd.h>
+int main()
+{
+	printf("hello");  /// this is user mode
+	fork();   /// this generates another process   & this is a system call which is in kernel mode thus process 2 is executed first
+	printf("world");    // <---- after execution of the prcess 2 the program continues from here
+	reutrn 0;
+}
+ 
+Process 2
+#include<unistd.h>
+int main()
+{
+	printf("hello");
+	fork();
+	printf("world");    /// process 2 starts from here even thought he whole program is copied
+	reutrn 0;
+}
+
+O/P    hello world world
+
+Ex 2 :-
+	
+	Process 1
+#include<unistd.h>
+#include<stdio.h>
+int main()
+{
+	int process_id,value = 0;
+	process_id = fork();   /// this generates another process   & this is a system call which is in kernel mode thus process 2 is executed first && this return the prcessid of child process
+	printf("process_id:- %d\n",process_id);    // <---- after execution of the prcess 2 in previous fork the program 1 continues from here
+	if(process_id>0)printf("value = %d",value+5);  // this means the current process is parent , & this line is executed in process 1
+	else if(process_id==0)printf("value = %d",value-5); 
+	reutrn 0;
+}
+ 
+Process 2
+#include<unistd.h>
+#include<stdio.h>
+int main()
+{
+	int process_id,value = 0;
+	process_id = fork(); // this fork is not called this means the porgram started after this line thus by default this will have value 0 which means this is in final child process 
+	printf("process_id:- %d\n",process_id);    // <---- the execution of the prcess 2 starts from here
+	if(process_id>0)printf("value = %d",value+5);
+	else if(process_id==0)printf("value = %d",value-5);   // this will be executed in child process
+	reutrn 0;
+}
+
+O/P    
+process_id:- 25220   // this can be any other value too
+value = 5
+process_id:- 0
+value = -5
+
+
+* process vs program
+= Process:- It is a progrm under execution & whihc is mainly stored in main memory & has been allocated resources to execute like it could be ram,cpu,i/o devices 
+Program:- It is stored in secondary memory, a programcan create multiple process, like whne we use fork
+Ex:- when we create a c program & compiled it, and it has created a a.out file, it is still a program and it is in seondary memeory but as soon as we start executing that a.out file then it becomes a process
+
+* Operations that OS perform ona process
+= 
+1. Create:- allocate resources
+2. Schedule:- its schedule the resources for a process CPU,I/O,RAM
+3. Block:- I/O, Interrrupts, pause a prcocess for a function, like interrupt 
+4. Suspend:- swap out the process out of ram for some other process temporarily when our ram is full
+5. Resume:- resume the process
+6. Terminate:- terminate an process after execution
+
+
+* (Process control block)Attribtes of a process:- 
+= All these attributes are stored in process control block, every process has a pcb or also known as context of procecss & it is uniquq for every process
+1. process identification:- uniquq way to identify a process,PID. id  
+2. Pointer – It is a stack pointer which is required to be saved when the process is switched from one state to another to retain the current position of the process.
+3. Process state – It stores the respective state of the process.
+4. CPU Related:- program counter(next insructionto be executed because it helps cpu to understand waht instruction it has to execute next ), general purpose registers,priority states(when a call comes in phone & it overlaps every other app) 
+5. Memory related:- This field contains the information about memory management system used by operating system. This may include the page tables, segment tables etc.
+6. File relted:- field ids, (whihc files i have access)
+7. I/O Related:- keyboard, open dvices process is using, because when i type something whihc process it should go to
+8. Protection related :- PSW program status word, permission(does a process have permission to open some file)
+
+* states of a process in os
+1.  new:- the process is about to be created but not yet created, it is the program which is present in secondary memory that will be picked up by OS to create the process.
+2. ready:- e process enters the ready state i.e. the process is loaded into the main memory. The process here is ready to run and is waiting to get the CPU time for its execution. Processes that are ready for execution by the CPU are maintained in a queue for ready processes.
+3. running:- Run – The process is chosen by CPU for execution and the instructions within the process are executed by any one of the available CPU cores. now from here if the process is non-premptive then it will either execute fully or if some interrupt occurs for input then it will go to wait state & if the wait state is full it will go to suspend wait state, and in the case of premptive, if the time spend in the running  state expires, then first the process will check if it can go to ready state or not, if the rady state is already full of process waiting to be executed, then the process wil go to suspend ready, because the process isnt asking for any input.
+4. terminate:- after fully execution of the process the process will be terminated.
+5. wait state:- wait state stores the process in main memory,the process comes here if the process require any input, the process comes in this state and stays until the others things are completed, if the wait state is full then it will send the process to suspend block or suspend wait. 
+6. suspend wait:- if the wait state gets full and then the process is given to the suspend wait state, & if the user gives the input required for the process then the process is handed over to suspend ready state, else if the wait gets some free space then the process is handed over to the wait state.
+7. suspend ready state:- if the ready state gets full the the process is handed over to suspend ready, & when some process is in suspend wait state & the process gets its input or the event that occured is completed or a the higer priority process is excecuted,& the process cant be handed over to the wait state because it is full then, the process is handed over to the suspend ready state.
+
+* Short-term vs medium-term vs long-term scheduling
+= https://www.tutorialspoint.com/short-term-vs-medium-term-vs-long-term-scheduling
+
+* Scheduling queues
+1. Ready Queue (in cpu) short term scheduler is used if the process is getting assigned to the cpu else mid term scheduler is used the the process is getting assigned to the any of the suspend 
+= consist of all the process that are in the ready state & every individual process are in the form of PCB(process control block).
+
+2. Block Queue (in ram)   mid term sceduler is used
+= i. Event queue:- It consist of all the process that created during execution of a process.Ex:- during fork() operation child process are created. 
+  ii. Device Queue:- Schedule the use of input o/p device for the process.
+
+3. Suspend queue (in the second memory) mid term scheduler 
+= Their can be Suspend ready queue which stores  process waiting to go to ready state & suspend block or suspend wait queue which stores process which are waiting for the input to be performed.
+
+4. Job queue (in the secondary memory) long term scheduler is used to select whihc program should be selected to become a process
+= where programs are waiting to be loaded into main memory, program hasnt become a process yet and the programs are scheduled to become a process.
+    
+* CPU Bound means the rate at which process progresses is limited by the speed of the CPU. A task that performs calculations on a small set of numbers, for example multiplying small matrices, is likely to be CPU bound.
+
+* I/O Bound means the rate at which a process progresses is limited by the speed of the I/O subsystem. A task that processes data from disk, for example, counting the number of lines in a file is likely to be I/O bound.
+
+*Memory bound means the rate at which a process progresses is limited by the amount memory available and the speed of that memory access. A task that processes large amounts of in memory data, for example multiplying large matrices, is likely to be Memory Bound.
+
+*Cache bound means the rate at which a process progress is limited by the amount and speed of the cache available. A task that simply processes more data than fits in the cache will be cache bound.
+
+* Schedulers:-are special system software which handle process scheduling 
+= 1. Long term (job) scheduler – Due to the smaller size of main memory initially all program are stored in secondary memory. When they are stored or loaded in the main memory they are called process. This is the decision of long term scheduler that how many processes will stay in the ready queue. Hence, in simple words, long term scheduler decides the degree of multi-programming of system.
+2. Medium term scheduler – Most often, a running process needs I/O operation which doesn’t requires CPU. Hence during the execution of a process when a I/O operation is required then the operating system sends that process from running queue to blocked queue. When a process completes its I/O operation then it should again be shifted to ready queue. ALL these decisions are taken by the medium-term scheduler. 3. Medium-term scheduling is a part of swapping.
+Short term (CPU) scheduler – When there are lots of processes in main memory initially all are present in the ready queue. Among all of the process, a single process is to be selected for execution. This decision is handled by short term scheduler.
+
+* Dispatcher
+= dispatcher, which is the module that gives control of the CPU to the process selected by the short-term scheduler. It receives control in kernel mode as the result of an interrupt or system call.
+A dispatcher is a special program which comes into play after the scheduler. When the scheduler completes its job of selecting a process, it is the dispatcher which takes that process to the desired state/queue. The dispatcher is the module that gives a process control over the CPU after it has been selected by the short-term scheduler. This function involves the following:
+1. When a process gets completed it destroys the PCB of the process.
+2. whenever a interrupt occurs it the save the state of that PCB & then give it to Block or wait queue & give the control of the cpu to a pcb from sts
+1. Switching context :- it loads the process from the short term scheduler
+1. also it could swithc when a higher priority process comes
+2. Switching to user mode & gives the control of the cpu to the process
+3. Jumping to the proper location in the user program to restart that program
+
+
+* INter Process Communication
+= Communication between two process that has shared memory.EX:- You tube streaming
+
+* Intra process COmmunication
+= Communtion between same process that has also shared memroy location, Ex:- a program calls a function and that function is using global variables whihc is shared by both main & that function 
+
+* Synchronization
+= Process Synchronization means sharing system resources by processes in a such a way that, Concurrent access to shared data is handled thereby minimizing the chance of inconsistent data. Maintaining data consistency demands mechanisms to ensure synchronized execution of cooperating processes. It can be defined as the co ordination between process to access system resources.
+1. Independent Process : Execution of one process does not affects the execution of other processes.
+2. Cooperative Process : Execution of one process affects the execution of other processes & because of the ordere of exection the consequences matters.Exx:- youtube streaming when a camera recorded a 1 sec clip the it compress & store in ram as packet, theen the streamer access that clip in the ram and send it to the cloud for distriution, so their is a co ordination betwene the streamer and camera,& they are both sharing the same memory for saving & accessing
+
+* Producer-Consumer Problem:
+= If a process A is producing something that B is consuming. The producer consumer problem (or bounded buffer problem) describes two processes, the producer and the consumer, which share a common, fixed-size buffer used as a queue. Producer produce an item and put it into buffer. If buffer is already full then producer will have to wait for an empty block in buffer. Consumer consume an item from buffer. If buffer is already empty then consumer will have to wait for an item in buffer. If we have used the Sleep and wake up then it could happen that incosistnecy can happen and both the producer and consumer could both go to sleep and a dedadlock could occur. Ex:- As soon as the producer cecked its condition and it was about to go to sleep and premption happen and the consumeer starts exectting and and at the entry section it checked its condition goes to sleep and at that time premption happen adn control goes back to the producer and it continues to execute from where it was left oof, and it also goes to the sleep and both the cons and prodcuer goes to sleep and creates a deadlock
+
+* Deadlock
+= When a process is trying to access some resource whihc is already been holded by another process, and that process is also waiting for some other process to realse the resources which that process is holding then deadlock occurs.their are some necessary conditions for a deadlock to occur & if we remove at least one of the condtions then it will not occur. Their must be at least 2 concurrent procoess for a deadlock to occur. 
+Resource allocation graph
+* Conditions for a synchronization problem
+= 1. Critical Section: 2=Multiple concurrent processes are trying to access shared resources & that shared section of reasouce is known as critical section.
+2. Hold and Wait:- Where a concurrent process is holding some resources & waiting for some otheer concurrent process to relase their resources, and that process that is holding the resourcees and that process waiting the other concurrent proccess to realse its resource.
+3. No premption: Their is no high priority process pressent.
+4. Circular wait:-  P1 waiting for P2 to relase its resources , P2 is waiting for P3 to realse its resources and P3 is waitnng for P1 to realse its resources.(
+5. Race condition:- process must be comepting with each other to access the resources
+
+Exx:-  I have 2 printers, i gave a command to print something and it checked whihc resources are free, so it dound that printer is free so as it was about to schedule the job to printer 1, someone else also ghave the command to print somehting, & premption happend, and it also cehcked what are the resource that are fre and it oudn taht printer 1 is free and it scheduled the job to printer 1, and then the process gave back the control to the previous process,and then the previous process also sceduled the job t printer1 and the pirinter 2 remained free, so inconsistency happendede and we weere not able to use the resources.
+
+* Deadlock handling
+1. Ignore:- 			}Deadlock can happen
+2. Detect and recover		}
+3. i. Prevention
+ii. Avoidance
+
+* Ignore (Ostrich algo:- they bury their heads when a sandstorm come)
+* Deadlock Detection and recovery:- https://www.geeksforgeeks.org/deadlock-detection-recovery/
+* Prevention
+We try to dissatisfy even 1 cond then their can be no deadlock, because for deadlock we have to satisfy hold and wait, no premption
+1. do premption
+i forceful		} but starvation can happen
+ii. self premption     }
+2. Before starting a process hold all the resources that will be required later to complete the process. This method has no wait because it is collectiong the resources beforehand but it is inefficent because it will cause starvation because it has collected all the resources that may or ay not be used at all the time while the process is executing.
+3. At any point when the process is exectuing, when th eprocess will request for more resource it will release all the reaouces it is holding . this method has no holding of resources but it also causus starvation because when it relsease the resources it willbe utilizaed by some other process and when the current processs whihc released the resources request for the resources, may never get the resouces becsue it is utuilizae dby some other process. 
+4. A ingenious solution to eliminate circular wait is we assign a specific id to resources and we will allocate resouces in strictly increasing order, whenever we allocate a resource to process we keep in check the maximum id, and whenever we were about to allocate a resource whose id is less than the maximum idd we have till now then we will release all the resouces that has id greater than the current resouce id. but it also has a problem of startvation because it may happen than we came accoss a sequence whihc may never let the process's able to assign all the resources it may reqiire t complete the process.
+
+* Avoidance
+**Banker's algo
+The banker’s algorithm is a resource allocation and deadlock avoidance algorithm that tests for safety by simulating the allocation for predetermined maximum possible amounts of all resources, then makes an “s-state” check to test for possible activities, before deciding whether allocation should be allowed to continue. not practical in real world because new process are always genearating & you need to know upfront how many resources a process i will need upfront.
+
+State of a system
+P1 ....Pn   n Process
+R1.....Rm   m Resources
+
+Max[n][m]    max[i][j]   // maximum Resources that i process will need at any point in time  //limitations
+Allocation[n][m]   Alloc[i][j]  // Resources that have been allocated
+Need[n][m]    Need[i][j]   //   Resources it needs at some point of time
+Available[m]   //Resources available of type m
+
+Banker's algo work on two internal algo
+1. Safety Algo
+max[n][m],alloc[n][m],need[n][m],available[m]
+
+ 1 work = available
+ 2 finished[i] = false i->n
+ 3 for every finished[i] = false && need[i][j]<=work[j] j->m:
+	if not then it will say unsafe state
+ 4 work+=alloc
+ 5  finished[i]  =true
+ 6 goto 3
+   for all finised[i] = true i->n 
+   	safe state 
+ 
+2. Resource-Request Algo
+   request<=available
+   request<=need
+   if all things are satisfied:
+   	need-= request
+   	available-= request
+   	alloc+= request
+   use saftey algo
+   if safe state then complete the request
+   else block the process
+
+* Mututal Exclusion
+=  It is a way to remove deadlock in, & it states that Only one of the process can access the critioal section at a time. Their entry section and exit section for a criticla section, & their are some synchronization mechanism which can be implemented & this can be hardware or software & if it is software then that can be either in kernel or user mode.
+1. Mututal exclusion with bounded waiting: In this Some cpu resources are wasted.
+2. Mututal exclusion without bounded waiting: In this cpu resources are not wasted.
+
+* COnditions that synchronization mechanism should satisfy
+= Primary
+1. Gaurantee mutual exclusion
+2. Progress: If their are process that are not in cricical section then they should not block other process that want to enter critical section. iF THE PROCESS SATISfy the contion to enter cricical section then it should. or a process whihc in non crical section should not block a process whihc is trying to enter critical section.
+3.Bounded waiting: no process should wait forever to enter cricical section
+4. no assumption about speed ?& speed.
+
+* Mechanisms
+1. Strict Alterration:- If a process is in crictcal section then another process whihc wants to enter critical section has to wait for the other process to finish its critical section. this solution provided mututal exclusion but it has flaws, like it odsent satisfy the property of progress, because when suppose their is a process whihc is waiting to enter its critical section and the other process is still executing its non critical section code then their is no progress thusthe strict alteration voilates progrees.
+// 
+	process1 
+	if(lock = 0)
+	{
+ 		critical section
+ 		lock = 1
+ 	}
+ 	
+ 	process2 
+	if(lock = 1)
+	{
+ 		critical section
+ 		lock = 0
+ 	}
+ 	
+ 	
+2. Disable Interrrupts (kernel mode): when a process enters a critical section then it will disable all interrupts
+3. lock(user mode): It ahs a major flaw that it works in user mode but it changes the lock variable at both time.
+	process1 
+	lock =0
+	if(!lock)
+	{
+ 		critical section
+ 	lock = 1
+ 	}
+ 	
+ 	process2 
+	lock = 1
+	if(lock = 1)
+	{
+ 		critical section
+ 		lock = 0
+ 	}
+
+* Peterson's algorithm it can also be expanded to muti process sol
+1. SOftware based solution 
+2. mututal exclusion
+3. busy waiting: it has busy waiting,Busy waiting is nothing but, one can say that CPU is busy for waiting & this can happen when while() cond. is true & control checks while loop infinitely
+4. bounded waiting: Bounded waiting is the finite no. of wait time of any process to get the CPU for it's execution
+5. progress: : If no process is executing in its critical section and some processes wish to enter their critical sections, then only those processes that are not executing in their remainder section can participate in deciding which will enter its critical section next, and this selection cannot be postponed indefinitely.
+
+The instruction are atomic in nature
+
+bool flag[2]={0}; 	  } Shared memory
+turn = 0;                }
+
+
+Process 0
+flag[0] = 1;   // STORE M[flag[0]] 1  } operation will happen atmicllay && immmediate
+turn =1;       //			} atomic & immediate
+while(flag[1]==1 && turn == 1);	// busy waiting
+Critical section
+flag[0] = 0;				} atomic & immediate
+
+Process 1
+flag[1] = 1;				} atomic & immediate
+turn =0;				} atomic & immediate
+while(flag[0]==1 && turn == 0);	} busy waiting
+Critical section
+flag[1] = 0;				} atomic & immediate
+
+
+* Test and set lock instruction
+= it is a hardware based solution in whihc a cpu can exectue more than 1 operation as  a sigle atomic instuction, thus if a premption happen in between execution the execution of test andd set lock instucction then, instruction will execute fully first only then the preptive process will start its exection
+
+* Priority inversion problem (premptive & priority) occurs in both test & set lock & peterson's algo
+When a higher process is already in CS using CPU, but a higher priority process and it takes the cpu resource and then it is waiting at the entry section to enter critical section, and the process which is already in thee critical section is wating to get the cpu which it can never get because another process already have that, thus it will get stuck, & a deadlock will occur.
+ 
+* Sleep and wakeup
+= they both are system calls & theyare used to save the cpu cycles , the sleep is used at the entry section whihc helps in saving the cpu cycles of busy waiting and give the resoucres of cpu to some other process whih needs the cpu,and the wake up is used at the EXIT section whihc helps in waking up the prcosess whihc is sleeping. 
+  CS
+ EXIT wakeup
+ 
+* Semaphores proposed by djkstra
+=  technique to manage concurrent processes by using a simple integer value, which is known as a semaphore. Semaphore is simply a variable which is non-negative and shared between threads. This variable is used to solve the critical section problem and to achieve process synchronization in the multiprocessing environment.software resource and if we want to use them we have to use system calls & they are part of kernel itself, & at its core they are integer values and every opertion of them are atomic in nature. Used in process synchronization.Ex:- can be used in video streaming
+Types
+1. Binary:-It can have only two values – 0 and 1. Its value is initialized to 1. It is used to implement the solution of critical section problem with multiple processes.
+struct Bsema{
+enum value{0,1};
+pcbqueue Q;
+};
+
+INIT(Bsema S,int x)
+{
+	S.value = x;
+}
+DOWN(Bsema S)
+{
+if(s.value)
+}
+
+2. Counting Sema:- Its value can range over an unrestricted domain. It is used to control access to a resource that has multiple instances.
+struct sema{
+int value;
+PCBQueue Q;
+}
+
+INIT (Sema S,int x)
+{
+	S.value = x;
+}
+DOWN(Sema S)
+{
+	--S.value;
+	if(S.value<0)   //Unsuccessful
+	{
+		add(currprocess,S.Q);
+		sleep(cuurentprocess);
+	}
+	else return //successful
+}
+UP(Sema S)
+{
+	++S.value;
+	if(S.value<=0)   
+	{
+		P = get(S.Q);   //PCB
+		wakeup(P);
+	}
+	else return 
+}
+
+v = 1  		q=0
+
+down =0
+up=0
+*Multiprogramming – A computer running more than one program at a time (like running Excel and Firefox simultaneously).
+*Multiprocessing – A computer using more than one CPU at a time.
+*Multitasking – Tasks sharing a common resource (like 1 CPU).
+*Multithreading is an extension of multitasking.
+
+
+* Multitasking
+In multitasking, the processes share separate memory.
+Multitasking component involves multiprocessing.
+CPU is provided in order to execute many tasks at a time.
+processes don’t share same resources, each process is allocated separate resources.
+Multitasking is slow compared to multithreading.
+ termination of process takes more time.
+ 
+ 
+* multi threading
+A thread perform a lightweight task within a process,thus its a lightweight process, thread is single sequential flow of program || , & it uses a seperate stack & register but the files & data is shared among multiple threads & remains the same thus it has better cpu utilization 
+processes are allocated same memory.
+CPU is provided in order to execute many threads from a process at a time.
+each thread share same resources.
+While multithreading is faster.
+termination of thread takes less time.
+if one thread is taking too long to execute or if it gets blocked, the rest of the threads keep executing without any problem.
+Ex:- video streaming, multiple users are consuming the same video 
+Types of Thread
+There are two types of threads:
+1. User level Thread:- User thread are implemented by users or user mode.OS doesn’t recognized user level threads.Implementation of User threads is easy.Context switch time is less.Context switch requires no hardware support.If one user level thread perform blocking operation then entire process will be blocked.Ex:- Java thread, POSIX threads. 
+2. Kernel Threads:- kernel threads are implemented by OS.increased efficiencyKernel threads are recognized by OS.Implementation of Kernel thread is complicated.Context switch time is more.Hardware support is needed.If one kernel thread perform blocking operation then another thread can continue execution.Kernel level threads are designed as independent threads.
+3. Hybrid-threads:- used in linux.each kernel-level thread has some set of user-level threads that take turns using it.Mapping is happened between user & kernel level threads, one to one, many to one , many to mamny 
+
+
+** Memory management
+* word:- word is achunk of memory or  a cell that is stored in a address in ram that a cpu can access in a single go. 
+Ex:- 32 bit processor or 64 bit processor means that a cpu can access 32 bit or 64 bit of data from a memory address in a single go
+
+* We can increas the siz eoff the ram either veritcally(increase the number of chips) or horizaontally(increase the size of word)
+
+** Overlays
+Their is a overlay driver for mmemory magament which tells that at a particular time a process dosent need the complete program to execute a module thus we dont need to load the complete program in main memroy thus conserving the more space, so it will create a overlay tree which tells what is maximum memory the program maay need to execute completely till the end,and it breaks the program in modules thus making sure it takes minimum space in the memory the whole time. The problem with this is that it is a expensive process in context of processing, and it is hard to find independent modules.
+The main problem in Fixed partitioning is the size of a process has to be limited by the maximum size of the partition, which means a process can never be span over another.In order to solve this problem, earlier people have used some solution which is called as Overlays.
+The concept of overlays is that whenever a process is running it will not use the complete program at the same time, it will use only some part of it.Then overlays concept says that whatever part you required, you load it an once the part is done, then you just unload it, means just pull it back and get the new part you required and run it.
+Formally,
+“The process of transferring a block of program code or other data into internal memory, replacing what is already stored”.
+Sometimes it happens that compare to the size of the biggest partition, the size of the program will be even more, then, in that case, you should go with overlays.
+So overlay is a technique to run a program that is bigger than the size of the physical memory by keeping only those instructions and data that are needed at any given time.Divide the program into modules in such a way that not all modules need to be in the memory at the same time.
+
+
+* Loader
+=  A loader is a major component of an operating system that ensures all necessary programs and libraries are loaded from the disk into the primary memory(RAM) for execution, which is essential during the startup phase of running a program. It places the libraries and programs into the main memory in order to prepare them for execution and then transfers control to the beginning instruction of the program.
+Their is:
+1. Static Loading 
+In this all modules of the code are loaded into main memory before runtime but this makes bad memory utilization  but it has higher spped of execution  in comparison to dynamic loading.
+2. Dynamic Loading
+In dynamic loading it only loads modules that are currently needed & in this method it has better memory utilization but the speed of exectuion is slow because loader has to pass control back and forth to load modules and give the control back to the instruction
+
+* Linker
+Linker is a program in a system which helps to link a object modules of program into a single object file. It performs the process of linking. Linker are also called link editors. Linking is process of collecting and maintaining piece of code and data into a single file. Linker also link a particular module into system library. It takes object modules from assembler as input and forms an executable file as output for loader. Linking is performed at both compile time, when the source code is translated into machine code and load time, when the program is loaded into memory by the loader. Linking is performed at the last step in compiling a program.
+Types:
+1. Static Linking –
+It is performed during the compilation of source program. Linking is performed before runtime in static linking. It takes collection of relocatable object file and command-line argument and generate fully linked object file that can be loaded and run. Has high memory utilization. It has branch and save return address instruction where ever a function is called.
+
+2. Dynamic linking – Dynamic linking is performed during the run time. This linking is accomplished by placing the name of a shareable library in the executable image. There is more chances of error and failure chances. It require less memory space as multiple program can share a single copy of the library. Their is file with extension .dll(dynamic linked libraries). Low memory utilization
+
+* We cant put 2 process in the same memory space even if we have the space to do so?
+= Because of protection condition, that states if we put two differnt process in same space then the other process could access the information of the other process. Thus we have limits for every process, that stores the maximum and minimum address that the process could access.
+
+a. * Partioning
+** Contigous
+
+* Fixed Partioning / MFT (multiprogramming with fixed nummber of task)
+The memory space distribution will be same.
+
+* Partition allocation method
+1. Best Fit :-  Allocate the process to the partition which is the smallest sufficient partition among the free available partition. It searches the entire list of holes to find the smallest hole whose size is greater than or equal to the size of the process. This has a disadvantage that we have to find the space that is available that takes some searching time.
+two types:
+i. Best fit only:- We will find the best partion for it, but if the space is not available then the process will wait until the space is freed.
+ii. Best available fit: We will find the best memory space that is currently available.
+
+2. Worst Fit:  Allocate the process to the partition which is the largest sufficient among the freely available partitions available in the main memory. It is opposite to the best-fit algorithm. It searches the entire list of holes to find the largest hole and allocate it to process.Disadvantage is that a lot of memroy wastage.
+
+3. First fit: the partition is allocated which is the first sufficient block from the top of Main Memory. It scans memory from the beginning and chooses the first available block that is large enough. Disadvantage is that a lot of memroy wastage.
+
+4. Next Fit : Next fit is similar to the first fit but it will search for the first sufficient partition from the last allocation point. Disadvantage is that a lot of memroy wastage.
+
+** Fragmentation:- wastage of memroy
+1. Internal Fragmentaion: We have a fixed partion block of our memroy and we allocate a process that takes less space in that memory block, & the wastage of space in that memory block is internal fragmentation.
+
+2. External Fragmentaion
+When a process needs memory and even though we have the available space which is non-interanally fragmented & we can't able to allocate it because it is non-contigous. That wastage of space is known as external fragmentation.
+
+b. Degree of multi programming:- It is fixed in Fixed partioning
+c. Process Size Limitation:- because of fixed size we have process size limittion
+
+**Variable Partioning (MVT - multiprogramming with variable number of task)
+The memory space distribution will be different.
+
+* Partition allocation method
+1. Best Fit :-  Allocate the process to the partition which is the first smallest sufficient partition among the free available partition. It searches the entire list of holes to find the smallest hole whose size is greater than or equal to the size of the process. This has a disadvantage that we have to find the space that is available that takes some searching time.
+two types:
+i. Best fit only:- We will find the best partion for it, but if the space is not available then the process will wait until the space is freed.
+ii. Best available fit: We will find the best memory space that is currently available.
+
+2. Worst Fit:  Allocate the process to the partition which is the largest sufficient among the freely available partitions available in the main memory. It is opposite to the best-fit algorithm. It searches the entire list of holes to find the largest hole and allocate it to process.Disadvantage is that a lot of memroy wastage.
+
+3. First fit: the partition is allocated which is the first sufficient block from the top of Main Memory. It scans memory from the beginning and chooses the first available block that is large enough. Disadvantage is that a lot of memroy wastage.
+
+1. Internal Fragmentaion: No internal occur in variable partioning
+
+2. External Fragmentaion
+When a process needs memory and even though we have the available space which is non-interanally fragmented & we can't able to allocate it because it is non-contigous. That wastage of space is known as external fragmentation.
+
+b. Degree of multi programming:- It is variable
+c. Process Size Limitation:- variable
+
+** Compacting/ Coalesing
+= This method solves the external fragmentaion problem by combining all the externally fragmented memory and create a single free block of space. This is a time consuming process because dynamic reallocation of chunk of memory happens.
+
+*** Logical address Vs Physical address
+The basic difference between Logical and physical address is that Logical address is generated by CPU in perspective of a program whereas the physical address is a location that exists in the memory unit.
+Logical Address Space is the set of all logical addresses generated by CPU for a program whereas the set of all physical address mapped to corresponding logical addresses is called Physical Address Space.
+The logical address does not exist physically in the memory whereas physical address is a location in the memory that can be accessed physically.
+Identical logical addresses are generated by Compile-time and Load time address binding methods whereas they differs from each other in run-time address binding method.
+The logical address is generated by the CPU while the program is running whereas the physical address is computed by the Memory Management Unit (MMU).
+When the Lgical address space > physical address then we have to use limited space efficently to bind differnt logical address to that space & we can also able to execute much larger process which has large logical adrees space than physical address .
+
+** Paging
+Paging is a method or techniques which is used for non-contiguous memory allocation. It is a fixed size partitioning scheme. In paging, both main memory and secondary memory are divided into equal fixed size partitions. The partitions of secondary memory area unit and main memory area unit known as as pages and frames respectively.
+Paging is a memory management method accustomed fetch processes from the secondary memory into the main memory in the form of pages. in paging, each process is split into parts wherever size of every part is same as the page size. The size of the last half could also be but the page size. The pages of process area unit hold on within the frames of main memory relying upon their accessibility.
+Paging is a memory management scheme that eliminates the need for contiguous allocation of physical memory. This scheme permits the physical address space of a process to be non – contiguous.It is a technique of memory allocation.Paging occurs when some part of process is transferres to disk.Only active process can perform paging.
+
+1. Organization of LAS(logical address size) has pages.Ex:- LAS = 8KB => Every logical address will be of (2^3)*(2^10), add the power = 10+3 = 13 bit address
+frame size  = page size
+Calculate number of pages given page size = 1 KB
+Pages  = LAS/Page size = 8KB/1KB = 8 pages
+Every single page will have page number and page offset
+page number can be calculated by log base 2(number of pages).
+Ex:- in 8 KB  log (8) = 3 will be page number & offset will be 10
+
+
+2. 1. Organization of PAS(Physical address size) has frames Ex:- 4KB => Physical address : (2^2)*(2*10) = Add the power 12 bits of address
+frame size  = page size
+Frame size = 1 KB
+Frames =  4 KB/1 KB = 4
+Calculate number of pages given frame size = 1 KB
+frame  = PAS/frame size = 8KB/1KB = 8 frame
+Every single page will have frame number and frame offset
+frame number can be calculated by log base 2(number of frame).
+Ex:- in 8 KB  log (8) = 3 will be frame number & offset will be 10
+
+3. MMU - Organization Memory management unit
+ MMU(Memory Management Unit):-
+It is computer hardware that maps logical address to physical address.The run time mapping between Virtual address and Physical Address is done by hardware device known as MMU.It converts virtual address in pages and assign page offset to them that help them in mapping to main memory. The run time mapping between Virtual address and Physical Address is done by hardware device known as MMU.
+In memory management, Operating System will handle the processes and moves the processes between disk and memory for execution . It keeps the track of available and used memory.
+Works:-
+1) It regulates RAM and caching memory
+2) It work is to regulate  availability of memory resources.(managing memory resources)
+3) Work is to allocate memory to every process and free when they have used it.
+
+* Page Table- Every Process has a page table.We use page table to convert logical address to first break it down to page number & page offset then we use page table to convert the page number0 to frame number & then use the frame number & offset to access the physical memory
+Page Table is a data structure used by the virtual memory system to store the mapping between logical addresses and physical addresses.
+Logical addresses are generated by the CPU for the pages of the processes therefore they are generally used by the processes.
+Physical addresses are the actual frame address of the memory. They are generally used by the hardware or more specifically by RAM subsystems.
+
+* Swapping:
+Swapping is a process of swapping a process temporarily to a secondary memory from main memory which is fast as compared to secondary memory. But as RAM is of less size so the process that is inactive is transferred to secondary memory. It is procedure of copying out the entire process.Swapping occurs when whole process is transferred to disk.In this process is swapped temporarily from main memory to secondary memory.Swapping can be performed without any memory management.Swapping is done by inactive processes.
+
+**Segmentation:
+Segmentation is another non-contiguous memory allocation scheme like paging. like paging, in segmentation, process isn’t divided indiscriminately into mounted(fixed) size pages. It is variable size partitioning theme. like paging, in segmentation, secondary and main memory are not divided into partitions of equal size. The partitions of secondary memory area unit known as as segments. The details concerning every segment are hold in a table known as as segmentation table. Segment table contains two main data concerning segment, one is Base, which is the bottom address of the segment and another is Limit, which is the length of the segment.
+In segmentation, CPU generates logical address that contains Segment number and segment offset. If the segment offset is a smaller amount than the limit then the address called valid address otherwise it throws miscalculation because the address is invalid.	Segment size may vary in segmentation as it grants dynamic increase of segments.
+While segments can be shared in segmentation..Segment map table in segmentation demonstrates every segment address in the memory.It provides virtual memory and maximum size of segment is defined by the size of memory.
+
+* Demand Paging:
+Demand paging is identical to the paging system with swapping. In demand paging, a page is delivered into the memory on demand i.e., only when a reference is made to a location on that page. Demand paging combines the feature of simple paging and implement virtual memory as it has a large virtual memory. Lazy swapper concept is implemented in demand paging in which a page is not swapped into the memory unless it is required.Page size is fixed in the demand paging.In demand paging, on demand pages are loaded in the memory.It does not allows sharing of the pages..It provides large virtual memory and have more efficient use of memory.
+
+* Tyeps of OS
+= https://www.geeksforgeeks.org/types-of-operating-systems/
+
+* Mutex vs semaphore
+= https://www.tutorialspoint.com/mutex-vs-semaphore#:~:text=Mutex%20is%20a%20mutual%20exclusion,and%20enter%20the%20critical%20section.
+
+Difference between Process and Threads.
+What is processor?
+What is microprocessor?
+
+**************************DBMS*****************************
+
+
+* What is database?
+= so what makes database differnet from traditional way of storeing and retrieveing or performing operations on data in file system is that database use various concepts like indexing,queriey optimizer etc, which makes it way faster , to make operations like updation,deletion, modfifyication,insertipon,deletion way faster,than a tradition file system. A database is a collection of related data which represents some aspect of the real world. A database system is designed to be built and populated with data for a certain task.
+
+*What is DBMS? What are the different types of DMBS?
+= Database Management System (DBMS) is a software for storing and retrieving users' data while considering appropriate security measures. It consists of a group of programs which manipulate the database. The DBMS accepts the request for data from an application and instructs the operating system to provide the specific data. In large systems, a DBMS helps users and other third-party software to store and retrieve data.
+DBMS allows users to create their own databases as per their requirement. The term “DBMS” includes the user of the database and other application programs. It provides an interface between the data and the software application. 
+Types:-
+1) Centralized Database
+2) Distributed Database
+3. NoSQL Database
+4. Cloud databse
+5. Object-oriented Databases
+6. Hierarchical Databases
+7. Network Databases
+8. Personal database
+9. Operational Database
+10. Enterprise Database
+
+* DBMS
+DBMS applications store data as file.
+In DBMS, data is generally stored in either a hierarchical form or a navigational form.
+Normalization is not present in DBMS.
+DBMS does not apply any security with regards to data manipulation.
+DBMS uses file system to store data, so there will be no relation between the tables
+DBMS has to provide some uniform methods to access the stored information.
+DBMS does not support distributed database.
+DBMS is meant to be for small organization and deal with small data. it supports single user.
+Examples of DBMS are file systems, xml etc.
+
+* RDBMS
+RDBMS applications store data in a tabular form.
+In RDBMS, the tables have an identifier called primary key and the data values are stored in the form of tables.
+Normalization is present in RDBMS.
+RDBMS defines the integrity constraint for the purpose of ACID (Atomocity, Consistency, Isolation and Durability) property.
+in RDBMS, data values are stored in the form of tables, so a relationship between these data values will be stored in the form of a table as well.
+RDBMS system supports a tabular structure of the data and a relationship between them to access the stored information.
+RDBMS supports distributed database.
+RDBMS is designed to handle large amount of data. it supports multiple users.
+Example of RDBMS are mysql, postgre, sql server, oracle etc.
+
+*Why we use RDBMS?
+= Multi-user access
+Design to fulfill the need for small and large businesses
+Remove redundancy and Integrity
+Expensive. But in the long term Total Cost of Ownership is cheap
+Easy to implement complicated transactions. 
+
+
+* What is SQL?
+= Structured query language, it started as a research project at IBM ,by boyee and codd, it has became a standard way to query, update, delte, modigy or insert in a database. It is a domain specific language, means that it can be only in database, ex:- we cant build a OS,webiste etc using sql, declatirve programming language
+
+* What is the candidate key?
+= A subset or a set of superkey attributes from whihc we can determine all the attributes is known as candiate key or a minimal attribute super key is called a candidate key,ex:- Super keys:- {A, bc} from which we can determine all the attributes then A will be the candidate key because it has minimum attributes from whihc we can dtermine all the other attributes or the closure of A+ can determine all the other attributes. Always check if their exist a subset of superkey by whihc if we find the closure of the subset of superkey if we are getting all the attributes or not.
+
+IMP :- and we have to keep in mind one thing that if their exist a attribute whihc is not reachable by any functional dependency then we have to consider that in every candiate key.
+
+* what is schema?
+= How the data is organized & what are the tables and its relation between them
+
+* What is super key?
+= A subset or a set of attributes from whihc we can determine every other attribute then it is called a superkey.Ex:- Attributes a,b,c,d,e  and assume AB is superkey then their exist some functional dependency among the attribtes by whihc which when using Ab as super key we can determine every attribute.  
+
+* Trivial vs Non trivial functional dependency
+= If XY->X :- Trivial  when RHs is a subset of LHS 
+  If X->C :- Non Trivial  When RHS is not a subset of LHS
+   
+
+* Cascade:- 
+= It is used in conjunction with ON DELETE or ON UPDATE. It means that the child data is either deleted or updated when the parent data is deleted or updated.It is used in conjunction with ON DELETE or ON UPDATE. It means that the child data is set to NULL when the parent data is deleted or updated. A foreign key with cascade delete means that if a record in the parent table is deleted, then the corresponding records in the child table will automatically be deleted.
+Ex:- 
+CREATE TABLE products( product_id INT PRIMARY KEY,product_name VARCHAR(50) NOT NULL,category VARCHAR(25));
+
+CREATE TABLE inventory(inventory_id INT PRIMARY KEY, product_id INT NOT NULL,quantity INT, min_level INT, max_level INT, CONSTRAINT fk_inv_product_id FOREIGN KEY (product_id) REFERENCES products (product_id) ON DELETE CASCADE);
+
+SQL-> PARSER,compiler -> query optimizer
+parser:- breaks the queirey in chunks and tries to understand instruction then complier compiles it insome language like c,c++, java or in whihc the db it is writeen internally,
+query optimizer = it says what is the most optimal way  to execute this statment, what is the best sequence we should execute, or what data structure we should use, and different database like, orcale, mysql etc will have different database
+executor:- whihc executes the code
+
+** Data manipulation langauage?DML
+= SELECT, INSERT, UPDATE, DELETE
+
+* SELECT CMD
+= used to generate a result set with the tcolumns names mentione along with thier metadata.
+the order of the column could be anything as given by the user, example we can select movie name first then year or vice-versa, a simple select query wil preserve the order of the data
+ SELECT movie,year FROM movies;
+ SELECT * FROM movies;
+
+* INSERT
+// single row insert
+= INSERT INTO movies(id,name,year) VALUES (4155,'SCHINDLER LIST',1998)
+// multiple row insert
+INSERT INTO movies(id,name,year) VALUES (4155,'SCHINDLER LIST',1998), (4155,'JOBS',1999)
+// Insert from one table to another
+INSERT INTO movies SELECT * FROM old_movies WHERE name IN ('pratt','lisa')
+// Insert from one table  to another when schema are not same
+INSERT INTO movies(id,movie) SELECT oid,omovie, FROM old_movies WHERE name IN ('pratt','lisa')
+
+* UPDATE
+= UPDATE movies SET movie="Gone",year=0 WHERE year = 1990; 
+
+* DELETE 
+= DELETE FROM movies WHERE id = 1;
+if you want to remove all rows then same cmd but without a where clause
+
+
+** DATA DEFINITION LANGUAGE
+** CREATE
+CREATE TABLE tname (id INT PRIMARY FOREIGN, lang VARCHAR(50) NOT NULL)
+we can write data type along with constraint to the columns
+
+Constrians can be:-
+NOT NULL:- ensure that column iis ntot null
+UNIQUE:- eNSURe that eveyr value is unique
+PRIMARY KEY:- A combination of not null andunique
+FOREIGN KEY:- uniquely identifies a row/record in another tbale
+CHECK:- Ensure that all values ina column satisfies a specific condiiotn
+INDEX :- used to create and retrieve data from the database very quickly
+(Indexing technizues are used sucha as hashing, B+tree)
+
+* ALTER
+:- ADD, MODIFY DROP
+= ALTER TABLE tablename ADD columnname DATATYPE(limit);
+= ALTER TABLE tablename MODIFY columnname DATATYPE(limit);
+= ALTER TABLE tablename DROP columnname;
+
+* DROP
+removes table along wiht all the data permananetly
+= DROP TABLE tablename;
+= DROP DATABASE database name;
+= DROP TABLE tablename IF EXISTS;
+
+* TRUNCATE
+= TRUNCATE TABLE tablename;
+
+* DATA CONTROL LANGUAGE
+= GRANT , REVOKE
+// user1 has access to that database
+GRANT ALL ON db1 TO 'USER1'@'localhost'
+
+// user1 has access to all database to run ALL the queries
+GRANT ALL ON * TO 'USER1'@'localhost'
+// role1 and role2 gets assigned to user1,user2
+GRANT 'role1','role2' TO 'user1'@'localhost1','user2'@'localhost2';
+// role3 gets access to world database to run select quesries
+GRANT SELECT ON world TO 'role3';
+
+* REVOKE
+= Takes away the privelages
+REVOKE INSERT ON *.* FROM 'Jefery'@'localhost';
+REVOKE 'role1','role2' FROM 'user1'@'localhost','user2'@'localhost';
+REVOKE SELECT ON world.* FROM 'role3';
+******
+
+* Aggrgate functions:- computes a single value on a set of rows and returns a aggregate,Ex:- 
+COUNT, MIN,MAX,SUM,AVG
+SELECT MIN(year) FROM movies;
+SELECT MAX(year) From movies;	
+SELECT COUNT(*) FROM movies; // return number of rown in movies
+SELECT COUNT(*) FROM movies WHERE year>2000
+
+* what is distinct command
+= It can be applied on single column and multiple columns
+SELECT DISTINCT genre FROM movies_genre; // slect all the distinct genre from movies_genre table and genre column o/p will be comedy, horror etc
+SELECT DISTINCT first_name, last_name FROM DIRECTORS ORDER BY first_name; // string firstname and last name combined should be unique
+
+* SHOW CMD
+//To see all the tables we have
+= SHOW TABLES;
+
+* DESCRIBE CMD
+= If you want to check teh detials of the tabel
+ DESCRIBE table_name
+  
+* GROUP BY CMD;
+= It groups the rows as the per the coulmn we choose,It will create a set of the specific items we choose to group together even NULL values.
+SELECT year, COUNT(year) FROM movies GROUP BY year;
+internall It will create a table for all the distinct year and in each of those it will contains the detials of the all the movies whihc are released in that year and then it will output the number of movies which are released in that year along with the year.   
+2001{moviedeatails1,moviedetails} 
+2002{moviedetials3,dmovies details4}
+O/P 2001 50004
+     2007 4568
+SELECT year, COUNT(year) FROM movies GROUP BY year ORDER BY year;
+
+* WHERE and conditinal statemns
+= WHERE is applied on individual rows and we use conditions along with them
+Conditions :-
+Not equal to:-   != <>
+Equal to:-   =    (NOTE:-  = does not work with NULL,  Ex:- SELECT movie FROM movies WHERE rank = NULL;)
+thus we use IS NULL & IS NOT NULL
+SELECT movie FROM movies WHERE rank IS NULL;
+SELECT movie FROM movies WHERE rank IS NOT NULL; 
+
+// sleect all comedy movies genre
+SELECT movie FORM movies WHERE genre = "COMEDY"; 
+
+* lOGICAL Operators
+= LIKE CMD
+// For string 
+// Prefix could be anything but at the end it should M
+SELECT * FROM movies WHERE movie LIKE '%M', O/P blaM, MGOeqwG
+// Sufffix could be anything but at the start it should M
+SELECT * FROM movies WHERE movie LIKE 'M%', O/P blaM, MGOsdwG
+// prefix & suffix could be anything but middle should M
+SELECT * FROM movies WHERE movie LIKE '%M%', O/P blaMadsa, adsMGeqwOG
+// at the _ their could be any character but the prefix and suffix should be same
+SELECT * FROM movies WHERE movie LIKE 'M_ok', O/P Mbok, Mcok
+in % their can be 0 or more chracter but in _ their has to be 1 charter
+Use escape character \ if you want to treat  % and _ symbol as a normal charcter & not as a special symbol
+SELECT * FROM movies WHERE movie LIKE '\%M\_ok', O/P %M_ok
+
+* EXISTS
+= The EXISTS operator is used to test for the existence of any record in a subquery. The EXISTS operator returns true if the subquery returns one or more records.
+SELECT SupplierName FROM Suppliers WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierID = Suppliers.SupplierID AND Price < 20) ORDER BY SupplierName;
+
+SELECT moviename FROM movies WHERE EXISTS(SELECT director FROM directors WHERE movies.directorname = director)
+
+* AND CMD
+= for using multiple conditions
+SELECT * FROM movies WHERE first_name LIKE "MID" AND last_name = "3"; 
+
+* OR CMD
+= if any conditon is true
+SELECT * FROM movies WHERE first_name LIKE "MID" OR last_name = "3"; 
+
+* IN CMD
+= Equivalent of multiple AND condition but it creates a set and check if the item mentionsed is in the set or not
+= SELECT * FROM movies WHERE genre IN ('COMEDY',HORROR);
+
+* NOT CMD
+= SELECT * FROM movies WHERE genre NOT IN ('COMEDY',HORROR);
+
+* BETWEEN CMD
+= SELECT * FROM movies WHERE year BETWEEN 1999 AND 2000;
+Equivalent to in between a range but we have to check the lowvalue and high value
+ SELECT * FROM movies WHERE year BETWEEN 2000 AND 1999;
+ thenn it will give a empty set
+
+* HAVING 
+where is used on individual rows and having is applied on groups
+if we dont have group by having is same as where
+// having is applied after grouping , where is applied before grouping
+// FIND OUT ALL THE yEARS in WHich 1000>movies are releases
+SELECT years, COUNT(years) year_count FROM movies GROUP BY years HAVING year_count>1000;
+
+SELECT year, COUNT(years) years_count FROM movies WHERE rank>9 GROUP BY years HAVING years_count>1000;  
+
+* LIMIT CMD
+= 
+//suppose we want only first 20 rows
+SELECT year, name FROM movies LIMIT 20
+
+* OFFSET
+= how many rows from the start you wantr to ignore
+// suppose in a webpage in our page 3 we want 40-60 rows from our table, or we want to ignore the first 40 rows and then get 20 rows 
+SELECT * FROM movies LIMIT 20 OFFSET 40
+
+* ORDER BY CMD
+= It is used to sort the data , and for descending order we use DESC after applying ORDER BY
+
+// select the top 10 movies in their descending year
+SELECT movie FROM movies ORDER BY year DESC LIMIT 10
+
+* EXISTS
+= It return true if a subqueirey return 1 or more values or not a empty set else it return false
+
+* ALL
+= returns true if the all the values in the set whihc is returned after the sub query meets the conditions stated
+Ex:- SELECT * FROM movies WHERE rankscore >= ALL (SELECT MAX(rankscore) FROM movies);
+
+* ANY
+= returns true if any of the values in the set whihc is returned after the sub query, meets the conditions stated
+Ex:- SELECT * FROM movies WHERE rankscore >= ANY (SELECT MAX(rankscore) FROM movies);
+get all the movies whose rankscore >= maximum rankscore 
+
+C-related subqueries:- & query withing a query where we have doing that operation again and again, and query optimizer may or may not optimi=ze the operation,more redable than some complex JOIns,
+Ex:- SELECT emp_no,name FROM employees emp WHERE salary> (SELECT AVG(salary) FROM employees WHERE department = emp.department);
+
+***JOINS
+t1 columns, c1,c2....
+t2 c2cc6..
+left c1,c5,c3 && right c4,c2,c6   combined c1,c2,c3,c4,c5,c6
+* INNER JOIN
+= If we have table1 as T1 & Table 2 as T2 THEN INTERVSECTION the intersection of their columns along with the common rows wil be outputd
+
+SELECT * FROM T1 JOIN T2 ON T1.C1 = T2.C2; || SELECT * FROM T1 INNER JOIN T2 ON T1.C1 = T2.C2;  // Intersection of c1 from t1 & c2 from t2 
+
+* LEFT OUTER JOIN
+= get all the values in left column and join it with right column and where it has same values fill the values of right and where it is not then place NULL their
+Ex:- SELECT * FROM T1 LEFT OUTER JOIN T2 ON T1.C1 = T2.C2; || SELECT * FROM T1 LEFT JOIN T2 ON T1.C1 = T2.C2; // all values of left column with intersection of right column values
+  
+* RIGHT OUTER JOIN
+= get all the values in right column and join it with left column and where it has same values fill the values of right and where it is not then place NULL their
+Ex:- SELECT * FROM T1 RIGHT OUTER JOIN T2 ON T1.C1 = T2.C2; || SELECT * FROM T1 RIGHT JOIN T2 ON T1.C1 = T2.C2; // all values of left column with intersection of right column values
+
+* FULL OUTER JOIN
+= Its union of everything and if we are not able to find some same value in the column then place NULL their, its same as union of left outer join and right outer join
+SELECT * FROM T1 FULL OUTER JOIN T2 ON T1.C1 = T2.C2;
+  
+* Natural JOin
+= A join where we have same column name across two tables,after joining the tables only a single column will exist with the same name
+Ex:- T1 :- c1,c2
+T2:- c1,c3,c4
+SELECT * FROM T1 JOIN T2; || SELECT * FROM T1 JOIN T2 USING (c1);
+crtes a table wiht columns c1,c2,c3,c4, no need to use ON clause
+
+* K-joins
+SELECT a.first-name, a.last_name FROM actors a JOIN roles r ON a.id=r.actor_id JOIN movies m ON m.id=r.movie_id AND m.name='Officer 444';
+ joins are computationally most expensive
+ 
+* what is a alias?
+Suppose i want to sort by the count of year, and i use order by and i used the aggreater COUNT(year) then it wont work because it is aggregator opertor keyword, thus we have to use some other name for that to work, and we simply use a alias(year_name). 
+= SELECT year, COUNT(year) year_name FROM movies GROUP BY year ORDER BY year_name;
+
+*Write a query to get the second highest number from the student_marks table.
+= SELECT marks FROM student_marks ORDER BY marks DESC LIMIT 2 OFFSET 1
+https://sqlzoo.net/wiki/SELECT_basics
+
+* What is view?
+= In SQL, a view is a virtual table based on the result-set of an SQL statement. A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database. You can add SQL functions, WHERE, and JOIN statements to a view and present the data as if the data were coming from one single table. Types:-
+=Dynamic views can contain data from one or two tables and automatically include all of the columns from the specified table or tables. Dynamic views are automatically updated when related objects or extended objects are created or changed. 
+=Static views can contain data from multiple tables and the required columns from these tables must be specified in the SELECT and WHERE clauses of the static view. Static views must be manually updated when related objects or extended objects are created or changed.
+Ex:- 
+CREATE VIEW [Brazil Customers] AS SELECT CustomerName, ContactName FROM Customers WHERE Country = 'Brazil';
+SELECT * FROM [Brazil Customers];
+CREATE OR REPLACE VIEW [Brazil Customers] AS SELECT CustomerName, ContactName, City FROM Customers WHERE Country = 'Brazil';
+DROP VIEW [Brazil Customers]
+
+* If Serial no. has to be Primary Key in a Database, should it be stored in a varchar or number datatype.
+= Both are acceptable, but key has to be unique everytime. 
+
+* Triggers
+= Triggers are stored programs, which are automatically executed or fired when some events occur. Triggers are, in fact, written to be executed in response to any of the following events − DML,DDL,DCL
+Triggers can be defined on the table, view, schema, or database with which the event is associated.
+Use:-
+Generating some derived column values automatically
+Enforcing referential integrity
+Event logging and storing information on table access
+Auditing
+Synchronous replication of tables
+Imposing security authorizations
+Preventing invalid transactions
+
+CREATE OR REPLACE TRIGGER display_salary_changes 
+BEFORE DELETE OR INSERT OR UPDATE ON customers 
+FOR EACH ROW 
+WHEN (NEW.ID > 0) 
+DECLARE 
+   sal_diff number; 
+BEGIN 
+   sal_diff := :NEW.salary  - :OLD.salary; 
+   dbms_output.put_line('Old salary: ' || :OLD.salary); 
+   dbms_output.put_line('New salary: ' || :NEW.salary); 
+   dbms_output.put_line('Salary difference: ' || sal_diff); 
+END;
+
+
+
+* Employee table and explain how 1st normalization to BCNF has to applied on the table.
+= First all the data should be in col & rows and the row and colums data does not have any repeating columns, then we remove any partial dependence by creating seperate tables for the attribut due to whihc it is occuring, and set at least one of attributes as the primary key in of that specific table,,and the remaining attributes are dependent on the primary key, and then we will remove the transitive dependencey , if we have any then finally we check that in every dependence our left side is superkey
+
+* What is the difference between primary key and UNIQUE constraints? why are they called unique constraints?
+= primary key should be able to access all the rows and UNIQUE constriant can be used for all the columns to check if the data we are storing in a column is alwyas unique and the column dosne thave to be a primary key colmn it can be used for any column, and jsut as primary key we have to specify in whihc column we want the data to be unique. and the column dosnet have to be apart of a primary key. 
+
+* prime vs non-prime attribute
+= prime attributes is part of a candidate key, & non prime is not part of a candidate key
+
+* transaction
+= A transaction is a single logical unit of work which accesses and possibly modifies the contents of a database. Transactions access data using read and write operations.
+
+* What is ACID property?
+= Atomicity - A entire transaction takes place at once or dosent happen at all.  a transaction to transfer funds from one account to another involves making a withdrawal operation from the first account and a deposit operation on the second. If the deposit operation failed, you don’t want the withdrawal operation to happen either.
+
+Consistency - A database must be consistent before and afer the  transaction. a database tracking a checking account may only allow unique check numbers to exist for each transaction
+
+Isolation - multiple transaction happen independently without interferance. a teller looking up a balance must be isolated from a concurrent transaction involving a withdrawal from the same account. Only when the withdrawal transaction commits successfully and the teller looks at the balance again will the new balance be reported.
+
+Durability - the changes of a successful transaction occur even if the system failure occurs.  A system crash or any other failure must not be allowed to lose the results of a transaction or the contents of the database. Durability is often achieved through separate transaction logs that can "re-create" all transactions from some picked point in time (like a backup).
+
+* What is the super key?
+= A super key can be a set of attributes which cna be used to identify ebeyr row uniquely. All super keys can’t be candidate keys but its reverse is true. SUPER KEY can be NULL;
+
+* What is the candidate key?
+= A minimum number of attributes required to identigy each row uniquely,or a minimal super key is candidate key,their can be multiple candidate keys. A candidate key can be NULL.
+
+* What is the primary key?
+= A primary keey is a candidate key which databse admin choose for a specific table. Primary key cant be NULL.
+
+* what is a foreign key?
+= A FOREIGN KEY is a key used to link two tables together, a field (or collection of fields) in one table that refers to the PRIMARY KEY in another table. The table containing the foreign key is called the child table, and the table containing the candidate key is called the referenced or parent table. The FOREIGN KEY constraint is used to prevent actions that would destroy links between tables. The FOREIGN KEY constraint also prevents invalid data from being inserted into the foreign key column, because it has to be one of the values contained in the table it points to.
+
+
+* how to do normalization?
+= first find out all candiate keys, then write down all the prime attributes, check its in 2 nf, no part of a candite key is detrmining a non prime attribute, then remove any transitive dependancey, by giving them a seperate relation or table, and making them the superkey for that table
+
+* What is Normalization ?
+= Decomposition of set of attributes to minimize redundancy in such a way that relation function dependanccey between attributes remains lossless & reduce anomalies.
+
+* why we do normalization?
+= The primary purpose of the normalization is to reduce the data redundancy i.e. the data should only be stored once. This is to avoid any data anomalies that could arise when we attempt to store the same data in two different tables, but changes are applied only to one and not to the other.
+
+* What are the anomalies of Normalization?
+= Insertion, update and deletion anomaly. when not in 1NF,2NF----4NF
+
+*Types of Normalization?
+= 1NF:- an entity that does not have any repeating columns or data groups can be termed as the First Normal Form. In the First Normal Form, every column is unique.Their is no multivalued attribute, if their is then split it into seperate rows.
+
+2NF :- When their exist no part of a candiate key determininga non prime attribute,partial dependencey(part of a candidate key or proper subset determines some other attribute other than itself) and relation is in 1NF, if their exist PD, then remove it by creating another relational table.
+all non-key attributes are fully functional dependent on the primary key
+
+3NF:- For all non-trivial FD, When X->Y WHERE Y is a prime attribute then we have to remove that, & we are in 2NF.All prime attribute must depend on a s-key. no non prime attribute is transitively dependant ona key. No non prime attribute is depending a non prime attribut.
+Ex:- X->Y, Y->Z, Z->A
+NOTE:- Either X->Y   , either X is a superkey or Y is a prime attribute
+
+**BCNF= Every FD X->Y , x is a superset of & Y its subset, (trivial) & X is superkey, Every BCNF is in 3 NF. or X->Y then either X has to be a super key or Y has to bea prime attribute
+Note:- X->Y , X is auper key
+-Fourth Normal Form (4 Normal Form):- A relation will be in 4NF if it is in Boyce Codd normal form and has no multi-valued dependency.
+By definition, a table is in Fourth Normal Form, if it does not have two or more, independent data describing the relevant entity.
+-Fifth Normal Form (5 Normal Form) :- A table can be considered in Fifth Normal Form only if it satisfies the conditions for Fourth Normal Form and can be broken down into multiple tables without loss of any data. A relation is in 5NF if it is in 4NF and not contains any join dependency and joining should be lossless.
+
+** Achievabilty of BCNF
+we cannot always gaurantee 
+lossless, dependency preserving and BCNF
+R(ABC)     FD{AB->C,C->B}
+R1(AB)  =  {AB}
+R2(CB)  = {CB}
+
+Example of bcnf:-
+EMP_ID   →    EMP_COUNTRY  
+EMP_DEPT   →   {DEPT_TYPE, EMP_DEPT_NO}  
+Candidate keys:
+
+For the first table: EMP_ID
+For the second table: EMP_DEPT
+For the third table: {EMP_ID, EMP_DEPT}
+
+Now, this is in BCNF because left side part of both the functional dependencies is a key.
+
+
+* If you are given employee name, employee salary, employee id, then Create a table through SQL query.
+= create functional dependency first then think of a table and do normalisation and then jump onto queries
+
+* examplw of dbms
+= xml file
+
+* What is MySQL? Is it RDBMS or DBMS?
+= MySQL Database Service is a fully managed database service to deploy cloud-native applications using the world's most popular open source database. and it is rdbms.
+
+* How we store data in RDBMS?
+= An RDBMS is a DBMS which manages a relational database. A relational database stores data in tables. Tables are organized into columns, and each column stores one type of data (integer, real number, character strings, date, …). 
+
+* RDBMS also store data in .sql format file. So how can we differentiate the file of DBMS and RDBMS?
+= The key difference is that RDBMS (relational database management system) applications store data in a tabular form, while DBMS applications store data as files. Does that mean there are no tables in a DBMS? There can be, but there will be no “relation” between the tables, like in a RDBMS
+
+* What is Primary Key? How it is different from Unique Key?
+= primary key Unique identifier for rows of a table,
+Unique identifier for rows of a table when primary key is not present
+primary Cannot be NULL,unique Can be NULL
+Only one primary key can be present in a table,	Multiple Unique Keys can be present in a table
+Selection using primary key creates clustered index	Selection, using unique key creates non-clustered index
+
+* What are attributes?
+= an attribute refers to a database component, such as a table. It also may refer to a database field. Attributes describe the instances in the column of a database.
+
+* What are the different types of SQL Languages? Explain them briefly with examples.
+= Data manipulation langauage= SELECT, INSERT, UPDATE, DELETE
+DATA DEFINITION LANGUAGE = CREATE,ALTER (ADD, MODIFY DROP),TRUNCATE
+DATA CONTROL LANGUAGE = GRANT , REVOKE
+
+* Where we can use CREATE command? Write a query using CREATE.
+= To create, table, view, databse:- 
+CREATE VIEW [brazil customer] AS SELECT amount FROM Customers WHERE country='Brazil'; 
+CREATE TABLE customers(cusid INT, lang VARCHAR(50))
+CREATE DATABASE db;
+CREATE TABLE tname (id INT PRIMARY FOREIGN, lang VARCHAR(50) NOT NULL)
+
+* What are sql queries?
+= A query is really a question or request for data. Structured Query Language SQL),is used to do various operations on data.
+
+* What is the Difference between Delete and Truncate ?
+= 
+					Delete 						Truncate
+Basic           It is used to delete specific data  		    It is used to delete the entire data of the table 
+Where clause  	We can use with where clause 					It can’t be used with where clause 
+Locking		    It locks the table row before deleting the row 	It locks the entire table 
+Rollback 		We can rollback the changes.					We can’t rollback the changes 
+Performance  	It is slower than truncate 						It is faster than delete 
+
+* If you have to delete employee id – 400 from employee table, then.How will you delete it ?? Write its SQL query.
+= DELETE FROM employee WHERE empid=400;
+
+*
+Constraints are the rules enforced on the data columns of a table. These are used to limit the type of data that can go into a table. This ensures the accuracy and reliability of the data in the database.
+Following are some of the most commonly used constraints available in SQL.:-
+* NOT NULL Constraint − Ensures that a column cannot have NULL value.
+* DEFAULT Constraint − Provides a default value for a column when none is specified.
+* UNIQUE Constraint − Ensures that all values in a column are different.
+* PRIMARY Key − Uniquely identifies each row/record in a database table.
+* FOREIGN Key − Uniquely identifies a row/record in any of the given database table.
+* CHECK Constraint − The CHECK constraint ensures that all the values in a column satisfies certain conditions.
+* INDEX − Used to create and retrieve data from the database very quickly.
+
+Referential Integrity is set of constraints applied to foreign key which prevents entering a row in child table (where you have foreign key) for which you don't have any corresponding row in parent table i.e. entering NULL or invalid foreign keys. Referential Integrity prevents your table from having  incorrect or incomplete relationship e.g. If you have two tables Order and Customer where Customer is parent table with primary key customer_id and Order is child table with foreign key customer_id. Since as per business rules you can not have an Order without a Customer and this business rule can be implemented using referential integrity in SQL on relational database.Referential Integrity will cause failure on any INSERT or UPDATE SQL statement changing value of customer_id in child table, If value of customer_id is not present in Customer table. 
+
+
+Trivial Functional Dependency :
+The functional dependencies which are satisfied by all relations are known as trivial functional dependencies. 
+Functional dependency of the form a -> b is trivial when a is the subset of b. 
+For example : A -> A is satisfied by all relations involving attribute A.
+Non Trivial Functional Dependency : 
+Let R be the relation schema, and X , Y be its some of the attributes. Then, X -> Y is non trivial over R only if :
+X INTERSECT Y  = 0  and  X -> Y should satisfy the definition of Functional dependency.
+i.e. there should be no common attributes in the sets of X and Y. 
+Semi Non Trivial Functional Dependency : 
+Semi non trivial Functional Dependencies are a combination of Trivial and Non Trivial Functional Dependencies.
+For example : Sid -> Sid Sname
+Here the trivial part is Sid -> Sid and Non Trivial Part is Sid -> Sname.
+
+
+A transaction is a single logical unit of work which accesses and possibly modifies the contents of a database.
+ACID Properties are:-
+Atomicity
+By this, we mean that either the entire transaction takes place at once or doesn’t happen at all. There is no midway i.e. transactions do not occur partially. Each transaction is considered as one unit and either runs to completion or is not executed at all. It involves the following two operations.
+—Abort: If a transaction aborts, changes made to database are not visible.
+—Commit: If a transaction commits, changes made are visible.
+Atomicity is also known as the ‘All or nothing rule’.
+* Consistency
+This means that integrity constraints must be maintained so that the database is consistent before and after the transaction. It refers to the correctness of a database. Referring to the example above,
+The total amount before and after the transaction must be maintained.
+Total before T occurs = 500 + 200 = 700.
+Total after T occurs = 400 + 300 = 700.
+Therefore, database is consistent. 
+* Isolation
+This property ensures that multiple transactions can occur concurrently without leading to the inconsistency of database state. Transactions occur independently without interference. Changes occurring in a particular transaction will not be visible to any other transaction until that particular change in that transaction is written to memory or has been committed.
+* Durability:
+This property ensures that once the transaction has completed execution, the updates and modifications to the database are stored in and written to disk and they persist even if a system failure occurs. These updates now become permanent and are stored in non-volatile memory. The effects of the transaction, thus, are never lost.
+https://www.tutorialspoint.com/dbms/images/transaction_states.png
+
+
+6.a lost update occurs when two different transactions are trying to update the same column on the same row within a database at the same time. Typically, one transaction updates a particular column in a particular row, while another that began very shortly afterward did not see this update before updating the same value itself. The result of the first transaction is then "lost," as it is simply overwritten by the second transaction. We can store the previous results of transactions that has occured and we can check it with them.
+  
+
+
+
+
+*****************************Computer network*********************************
+Can you explain me what is a cloud?
+: 7 layers of OSI model.
+3.http, https difference
+What is a repeater?
+: Whats the network topology in this lab? (yes, my interview was going in a computer lab)
+
+
+
+
+
+
+
+
+*************HR************
+* tell something about yourself?
+= Good evening everyone & thank you for giving me this opportunity. So my full name is adarsh kunwar and im currently pursuing Btech from GEU & my branch is CS. I'm a CS enthusiast & I really enjoy participating in coding challenges, create projects like Amazon Clone using React || MERN Stack,Traffic Monitoring System Using Machine Lenring,Covid  Statics Web application usign areact & I really like to read & write articles, editorials & creating educational videos. & all these activities have really helped me grow my skills,& knowledge & I'm a compassionate & cooperative person & I like to take a planned approach towards a problem,& if I'm working in a team with a goal to solve a problem, I like to hear all sides & then take the most efficient approach which can be applied at the moment and I would love to work in a team and lead it & that's about it.
+
+Tell me about the project you have done
+What do you know about tcs. 
+* Who motivates you the most?Who motivates you the most?
+= 
+
+* Three take away from IIT Patna, etc.
+
+* talk about about my strengths and weaknesses.
+= I think its that when i do some project or after doing coding questions for hours, or after participating in coding challenges or after learning some new approach to solve some problems, and after putting in all that effort,and when i get free, then i want to go out on weekends, and maybe go hangout with friends, or when i wanna go see some movie,or buy a gaming cosole or install windows to play games, and i want to do something else,but I know that this thing im doing is going to bring me most value, and that moment when i decide to sit down to learn more, no one's forcing me to do that, their is no pressure on me, its somethig deep down that i know that I want to do,watch the code, wathc the videos learn from articles and do all that,I have that mindset, I have that resourcefulness and thats a skill, and its not something I had before but I developed over the past years and my weakneess  
+asked about my day
+
+* Why do you want to join tcs?
+
+* How tcs will help you to improve your skill?
+Okay, Apart from these things (cricket and college study), What do you do in your free-time?
+* What are your hobbies?
+* What is the current revenue of cognizant?
+Where do you see yourself after 10 years?
+ Introduce yourself apart from what written in your CV.
+ How will you handle problems you will face jumping into professional  world from your student life?
+ What do you know about Cognizant?
+ If you are the education minister of the country and you have to do some changes in the syllabus of engineering, what will you do?
+What are your hobbies?
+What do you do in your free time?
+
+* Why should we hire you?
+= I am a self motivated person. I quickly pick up knowledge related to my projects.For ex:- react and current project, I would like to add that I work well both as an individual contributor and also as a team member & I belive in long term we have to make our team members & ourself better and not be a liability. I will surely work towards building my expertise, towards the projects which are which would ultimately be benefical for the organization & i think I will bring value to th eoorganization, 
+
+* Challenging time?
+1st year of college, because struggleing in programing. and quuestion myslef is this for me?
+
+
+Can you tell me the annual revenue of Cognizant?
+What are the things you think you will be liking in Cognizant more than other It firms?
+Tell me about Cognizant.
+)Whether I would like to learn any other programming language other than C++ and Python?
+4)My long term career objective.
+5)Whether I would prefer online courses for learning?If Yes, Why?
+What made you to choose Cognizant?
+What value can you bring to the Organization
+Have you faced any problem during some of your project? How did you solved it?
+What new Technology Stack are you currently working on?
+Why do you want to join Cognizant?
+Where are you from and are you willing to relocate?
+About her essay that she had written in her AMCAT test.
+Tell me something about your family.
+Can you told me some sentences why Listening Skills are important in our life?
+What is your biggest weakness?
+Why CTS? (Prepare this very well).
+Why after ECE you want to join an IT company(Tricky but there is a more tricky way to tackle this so be prepared).
+What was your most challenging situation in life until now.
+If I ask your friends about you, what will they say?
+ Describe yourself in three bullet points.	
+ And what about your weakness?
+ What is your final year project ?? Tell me in brief. (Most important.. )
+5.  Are you doing it alone or in group ??
+6.  How flexible are you in group ??
+What do you learn from college apart from academics.
+. Tell me something unique about yourself that differs you from rest of the candidates. 
+what makes you feel challenge in the college   
+ 
+ 
+*********************Other********************
+* who is the CEO of CTS
+= Brian Humphries
+* who is the CEO of TCS
+= Rajesh Gopinathan
+
+* What do you mean by cryptocurrency?
+= A cryptocurrency is a digital or virtual currency that is secured by cryptography, which makes it nearly impossible to counterfeit or double-spend. Many cryptocurrencies are decentralized networks based on blockchain technology—a distributed ledger enforced by a disparate network of computers.
+
+* What is a Thread?
+A thread is a path of execution within a process. A process can contain multiple threads.
+Why Multithreading?
+A thread is also known as lightweight process. The idea is to achieve parallelism by dividing a process into multiple threads. For example, in a browser, multiple tabs can be different threads. MS Word uses multiple threads: one thread to format the text, another thread to process inputs, etc. More advantages of multithreading are discussed below
+
+* Process vs Thread?
+The primary difference is that threads within the same process run in a shared memory space, while processes run in separate memory spaces.
+Threads are not independent of one another like processes are, and as a result threads share with other threads their code section, data section, and OS resources (like open files and signals). But, like process, a thread has its own program counter (PC), register set, and stack space.
+
+Can you print  your name "Ankita Rajput" without using semicolon (;) ? If possible then how?
+Do you know Python?
+Do you know Linux?
+Explain Software Development Life Cycle in short. What are the different 
+ I know about data science and as I knew he went on asking based on cloud computing and IoTphases of it?
+What are the different types of testing?
+* What is cache memory?
+* SDLC (Software Engineering)
+* Which stage of SDLC do you prefer?
+* Which is most important stage in SDLC?
+* i am hacking your college website and as an IT student what will you suggest to prevent hacking
+
+**********************Puzzle**********************
+ If today is Monday, what will be the day after 45 days.
+  how a biased coin can be made into unbiased.
