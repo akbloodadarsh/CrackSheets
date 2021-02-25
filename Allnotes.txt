@@ -9,7 +9,10 @@ Technical Round
 = https://www.geeksforgeeks.org/pointers-vs-references-cpp/
 
 * structure vs class
-= 
+= https://www.geeksforgeeks.org/structure-vs-class-in-cpp/
+
+* C struct vs c++ struct
+= https://www.geeksforgeeks.org/difference-c-structures-c-structures/
 
 *****************************General***********************
 * What’s your favorite subject?
@@ -227,8 +230,17 @@ Linear and Non linear Data structures.
 * Real world example of OOPs Concept
 = https://www.geeksforgeeks.org/understanding-oops-and-abstraction-using-real-world-scenario/
 
+* What is Class and Object?
+= https://www.geeksforgeeks.org/c-classes-and-objects/
+
 * Abstraction and Encapsulation Difference
 = 
+
+* Which type of Programming Language is JAVA?
+= OOP
+
+* What is OOP? What are the features of OOP?
+= https://www.geeksforgeeks.org/object-oriented-programming-in-cpp/
 
 * Virtual Functions in C++
 = https://www.geeksforgeeks.org/virtual-function-cpp/
@@ -262,6 +274,15 @@ int main()
 	b->show2();   // Base
 	return 0;
 }
+* Interface in java
+= https://www.geeksforgeeks.org/interfaces-in-java/
+
+* final in java 
+= https://www.geeksforgeeks.org/final-keyword-java/
+
+* abstract in java (class and methods)
+= https://www.geeksforgeeks.org/abstract-keyword-in-java/
+
 
 * Difference between POP and OOP?
 = https://www.geeksforgeeks.org/difference-between-oop-and-pop/
@@ -270,7 +291,7 @@ int main()
 = Multiple
 
 * Types of Inheritance 
-= 
+= https://www.geeksforgeeks.org/inheritance-in-c/
 
 * Can you explain the concept of Abstraction with an example?
 = Abstraction allows us to expose limited data and functionality of objects publicly and hide the actual implementation. It is the most important pillar in OOPS. In our example of Mobile class and objects like Nokia, Samsung, IPhone.This is called abstraction. In classes, we can create methods that can be called and used by the users of the class but users will have no idea what these methods do internally.
@@ -278,7 +299,7 @@ Some features of mobiles,
 1. Dialing a number call some method internally which concatenate the numbers and displays it on screen but what is it doing we don’t know.
 2. Clicking on green button actual send signals to calling person's mobile but we are unaware of how it is doing.
  
-* constructor and destructor
+* constructor and destructor 
 = https://www.geeksforgeeks.org/c-classes-and-objects/  At bottom
 
 * pure virtual destructor
@@ -290,9 +311,6 @@ Some features of mobiles,
 * Friend
 = https://www.geeksforgeeks.org/friend-class-function-cpp/
 
-* What is Class and Object?
-= https://www.geeksforgeeks.org/c-classes-and-objects/
-
 * Exception Handling
 = https://www.geeksforgeeks.org/exception-handling-c/
 
@@ -303,50 +321,39 @@ Some features of mobiles,
 = https://www.geeksforgeeks.org/static-keyword-cpp/
 
 * What are abstract classes? Can they make objects?
-= 
-
-* Which type of Programming Language is JAVA?
-= 
-
-* What is OOP? What are the features of OOP?
-= https://www.geeksforgeeks.org/object-oriented-programming-in-cpp/
-
-
+= In c++ we cannot because it contains a pure virtual function and also in java we cant.
 
 * We can create how many instance of an abstract class? Explain with an example.
 = None
 
 * what is JDBC ? also connectivity code?
-= 
+= https://www.geeksforgeeks.org/introduction-to-jdbc/
 
 * Why Java dosn't support Pointer Concepts?
-= 
-
-* aggregation, association, specialization, generalization, IS-A relationship, Encapsulation, Polymorphism
-=
+=  due to security reason, because if you get the address of any variable you could access it anywhere from the program without any restriction even variable is private.Java has a robust security model and disallows pointer arithmetic for the same reason. ... No pointer support make Java more secure because they point to memory location or used for memory management that loses the security as we use them directly.
 
 * What is method overloading and overriding?
-= 
+= https://www.geeksforgeeks.org/function-overloading-vs-function-overriding-in-cpp/
 
-What is Object Oriented Programming ?
-What are the features of Object Oriented Programming ?
 * What is Polymorphism and its types ??
 = https://www.geeksforgeeks.org/early-binding-late-binding-c/
 
-Write the code through any example to show polymorphism in your favourite language.     
-5.What is constructor?What is the use of it?What is the return type of constructor?
-6.Explain OOPs Concept
-7.Is “const” keyword exist in java?
-8.Method Overloading and Method Overriding
-9.What are the different types of inheritance?            
-What are classes and objects ?
-Scanner or BufferedReader and Why?
-I: what is the use of static keyword ?
-I: static classes and nested classes.
-I: Do you know about the collection framework? Tell me about HashMap . Tell me about ArrayList, HashSet vs Treeset.
-What is Inheritance?
-What are the types of Inheritance?
-Can you explain the difference between Multiple Inheritance and Multilevel Inheritance?
+* Write the code through any example to show polymorphism in your favourite language.     
+
+* What is constructor?What is the use of it?What is the return type of constructor?
+= it dosent have a return type
+
+* Is “const” keyword exist in java?
+= Java does not have const – it instead has final , which can be applied to local "variable" declarations and applies to the identifier, not the type. It has a different object-oriented use for object members, which is the origin of the name.
+
+* Scanner or BufferedReader
+= https://www.geeksforgeeks.org/difference-between-scanner-and-bufferreader-class-in-java/
+
+* static classes and nested classes.
+= https://www.geeksforgeeks.org/static-class-in-java/
+
+* Do you know about the collection framework? Tell me about HashMap . Tell me about ArrayList, HashSet vs Treeset.
+= https://www.geeksforgeeks.org/collections-in-java-2/
 
 //////////////// FACTS
 class Base { 
@@ -422,7 +429,7 @@ IN derived
 
 
 **************************OS**************************
-*What is Operating System?
+* What is Operating System?
 = It acts as a resource manager(process,memory management),provides security & maintainence(their are daemons runnning in the background) provides convinence and gives us utilities,can be used even by someone from a non technical background and suppose a programmer writes some code in some programming language then like:- printf and we run that then we dont need to worry about how operating system displays the otput on the screen, and if a non technical is using chrome to browse internet , then os provides its resources and help it to connect to wifi using NIC, and the user need not to worry about how is it connecting, and if we want to search some file or app then we type its name and os finds it for us 
 
 * what are interrupts?
@@ -1040,6 +1047,8 @@ Remove redundancy and Integrity
 Expensive. But in the long term Total Cost of Ownership is cheap
 Easy to implement complicated transactions. 
 
+** aggregation, association, specialization, generalization, IS-A relationship, Encapsulation, Polymorphism
+= https://www.geeksforgeeks.org/generalization-specialization-and-aggregation-in-er-model/
 
 * What is SQL?
 = Structured query language, it started as a research project at IBM ,by boyee and codd, it has became a standard way to query, update, delte, modigy or insert in a database. It is a domain specific language, means that it can be only in database, ex:- we cant build a OS,webiste etc using sql, declatirve programming language
