@@ -4,7 +4,8 @@ Technical Round
 **************C++
 * What is inline function 
 = https://www.geeksforgeeks.org/inline-functions-cpp/
-
+* storage class in c
+= https://www.geeksforgeeks.org/storage-classes-in-c/
 * pointer vs refrence
 = https://www.geeksforgeeks.org/pointers-vs-references-cpp/
 
@@ -980,7 +981,7 @@ Physical addresses are the actual frame address of the memory. They are generall
 Swapping is a process of swapping a process temporarily to a secondary memory from main memory which is fast as compared to secondary memory. But as RAM is of less size so the process that is inactive is transferred to secondary memory. It is procedure of copying out the entire process.Swapping occurs when whole process is transferred to disk.In this process is swapped temporarily from main memory to secondary memory.Swapping can be performed without any memory management.Swapping is done by inactive processes.
 
 **Segmentation:
-Segmentation is another non-contiguous memory allocation scheme like paging. like paging, in segmentation, process isn’t divided indiscriminately into mounted(fixed) size pages. It is variable size partitioning theme. like paging, in segmentation, secondary and main memory are not divided into partitions of equal size. The partitions of secondary memory area unit known as as segments. The details concerning every segment are hold in a table known as as segmentation table. Segment table contains two main data concerning segment, one is Base, which is the bottom address of the segment and another is Limit, which is the length of the segment.
+Segmentation is another non-contiguous memory allocation scheme like paging, in segmentation, process isn’t divided indiscriminately into mounted(fixed) size pages. It is variable size partitioning theme. like paging, in segmentation, secondary and main memory are not divided into partitions of equal size. The partitions of secondary memory area unit known as as segments. The details concerning every segment are hold in a table known as as segmentation table. Segment table contains two main data concerning segment, one is Base, which is the bottom address of the segment and another is Limit, which is the length of the segment.
 In segmentation, CPU generates logical address that contains Segment number and segment offset. If the segment offset is a smaller amount than the limit then the address called valid address otherwise it throws miscalculation because the address is invalid.	Segment size may vary in segmentation as it grants dynamic increase of segments.
 While segments can be shared in segmentation..Segment map table in segmentation demonstrates every segment address in the memory.It provides virtual memory and maximum size of segment is defined by the size of memory.
 
@@ -991,14 +992,16 @@ Demand paging is identical to the paging system with swapping. In demand paging,
 = https://www.geeksforgeeks.org/types-of-operating-systems/
 
 * Mutex vs semaphore
-= https://www.tutorialspoint.com/mutex-vs-semaphore#:~:text=Mutex%20is%20a%20mutual%20exclusion,and%20enter%20the%20critical%20section.
+= https://www.tutorialspoint.com/mutex-vs-semaphore#:~:text=Mutex%20is%20a%20mutual%20exclusion,and%20enter%20the%20critical%20section
 
-Difference between Process and Threads.
+* Difference between Process and Threads.
+= https://www.geeksforgeeks.org/difference-between-process-and-thread/
 What is processor?
 What is microprocessor?
 
-**************************DBMS*****************************
 
+
+**************************DBMS*****************************
 
 * What is database?
 = so what makes database differnet from traditional way of storeing and retrieveing or performing operations on data in file system is that database use various concepts like indexing,queriey optimizer etc, which makes it way faster , to make operations like updation,deletion, modfifyication,insertipon,deletion way faster,than a tradition file system. A database is a collection of related data which represents some aspect of the real world. A database system is designed to be built and populated with data for a certain task.
@@ -1080,7 +1083,7 @@ SQL-> PARSER,compiler -> query optimizer
 parser:- breaks the queirey in chunks and tries to understand instruction then complier compiles it insome language like c,c++, java or in whihc the db it is writeen internally,
 query optimizer = it says what is the most optimal way  to execute this statment, what is the best sequence we should execute, or what data structure we should use, and different database like, orcale, mysql etc will have different database
 executor:- whihc executes the code
-
+DML, DDL, 
 ** Data manipulation langauage?DML
 = SELECT, INSERT, UPDATE, DELETE
 
