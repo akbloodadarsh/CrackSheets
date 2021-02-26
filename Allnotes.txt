@@ -1566,7 +1566,13 @@ What is a repeater?
 
 *************HR************
 * tell something about yourself?
-= Good evening everyone & thank you for giving me this opportunity. So my full name is adarsh kunwar and im currently pursuing Btech from GEU & my branch is CS. I'm a CS enthusiast & I really enjoy participating in coding challenges, create projects like Amazon Clone using React || MERN Stack,Traffic Monitoring System Using Machine Lenring,Covid  Statics Web application usign areact & I really like to read & write articles, editorials & creating educational videos. & all these activities have really helped me grow my skills,& knowledge & I'm a compassionate & cooperative person & I like to take a planned approach towards a problem,& if I'm working in a team with a goal to solve a problem, I like to hear all sides & then take the most efficient approach which can be applied at the moment and I would love to work in a team and lead it & that's about it.
+= and thank you for giving me this opportunity,my name is Adarsh kunwar of graphic era university and my branch is computer science I'm  a computer science
+enthusiast and I like to participate in coding challenges create projects  and explore new technologies and framework like react, cloud specifically I 
+have used azure services Azure DevOps and use azure for depli=ying VM, web apps, etc and I have done an internship at programmer's army
+which is a  startup and I was the frontend lead and UI/ UX design team lead and there I managed a team of 12+ members and we used the scrum methodology and 
+tools like Trello and Figma and our task was to create the front end of the website from scratch using the react and design too and I really like to read &
+write articles, editorials & creating educational videos. & all these activities have really helped me grow my skills,& knowledge & I'm a compassionate & cooperative person & I like to take a planned approach towards a problem,& if I'm working in a team with a goal to solve a the problem, I like to hear all 
+sides & then take the most efficient approach which can be applied at the moment and I would love to work in a team and lead it & that's about it.
 
 Tell me about the project you have done
 What do you know about tcs. 
