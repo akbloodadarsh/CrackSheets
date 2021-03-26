@@ -1,4 +1,28 @@
 Technical Round
+***********Time Complexity
+* merge sort             nlogn   nlog n
+* selection sort         n^2      n^2              https://www.geeksforgeeks.org/selection-sort/    
+In every iteration of selection sort, the minimum element (considering ascending order) from the unsorted subarray is picked and moved to the sorted subarray.
+
+* insertion sort         n        n^2              https://www.geeksforgeeks.org/insertion-sort/  
+placing a card at right pos
+* heap sort               nlog n    nlogn
+* counting               n+k           n+k
+ radix                 n*k        n*k
+quick sort             n^2       nlogn           
+bubble sort            n         n^2             https://www.geeksforgeeks.org/bubble-sort/
+bucket sort 
+
+******Space 
+Quicksort	Array	O(n)
+Mergesort	Array	O(n)
+Heapsort	Array	O(1)
+counting sort   
+Bubble Sort	Array	O(1)
+Insertion Sort	Array	O(1)
+Select Sort	Array	O(1)
+Bucket Sort	Array	O(nk)
+Radix Sort	Array	O(n+k)
 
 ****************************ABOUT PROGRAMMING LANGUAGES*****************
 **************C++
