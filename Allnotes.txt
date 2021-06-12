@@ -1590,8 +1590,13 @@ What is a repeater?
 
 *************HR************
 * tell something about yourself?
-= My name is Adarsh Kunwar of graphic era university and my branch is computer science I'm a computer science enthusiast and I like to participate in coding challenges create projects and explore new technologies and framework like react, cloud specifically I 
-have used azure services Azure DevOps and use azure for deploying VM, web apps, etc and I have done an internship at programmer's army which is a  startup and I was the frontend lead and UI/ UX design team lead and there I managed a team of 12+ members and we used the scrum methodology and tools like Trello and Figma and our task was to create the front end of the website from scratch using the react and design too and I really like to read & write articles, editorials & creating educational videos. & all these activities have really helped me grow my skills,& knowledge & I'm a compassionate & cooperative person & I like to take a planned approach towards a problem,& if I'm working in a team with a goal to solve a problem, I like to hear all sides & then take the most efficient approach which can be applied at the moment and I would love to work in a team and lead it & that's about it.
+= My name is Adarsh Kunwar of graphic era university and my branch is computer science I'm a computer science enthusiast and I like to participate in coding challenges create
+projects and explore new technologies and framework like react, cloud specifically I have used azure services Azure DevOps and use azure for deploying VM, web apps, etc and I
+have done an internship at programmer's army which is a  startup and I was the frontend lead and UI/ UX design team lead and there I managed a team of 12+ members and we used
+the scrum methodology and tools like Trello and Figma and our task was to create the front end of the website from scratch using the react and design too and I really like to
+read & write articles, editorials & creating educational videos. & all these activities have really helped me grow my skills,& knowledge & I'm a compassionate & cooperative
+person & I like to take a planned approach towards a problem,& if I'm working in a team with a goal to solve a problem, I like to hear all sides & then take the most efficient
+approach which can be applied at the moment and I would love to work in a team and lead it & that's about it.
 
 Tell me about the project you have done
 What do you know about tcs. 
