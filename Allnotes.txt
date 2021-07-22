@@ -1,3 +1,6 @@
+
+* Design Pattern:- https://youtu.be/FLmBqI3IKMA https://youtu.be/WV2Ed1QTst8
+
 Technical Round
 ***********Time Complexity
 * merge sort             nlogn   nlog n
