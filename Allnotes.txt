@@ -221,7 +221,7 @@ Linear and Non linear Data structures.
 =
 
 * Tell me about semaphore? 2
-=
+= https://youtu.be/VcVbUbPNIfw
 
 * why use semaphore? 2
 =
