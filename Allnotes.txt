@@ -1,6 +1,7 @@
 
 * Design Pattern:- https://youtu.be/FLmBqI3IKMA https://youtu.be/WV2Ed1QTst8
 
+* Python :- https://www.youtube.com/playlist?list=PL7ersPsTyYt2dj8J0nh0APeXvkwnMknYA 
 Technical Round
 ***********Time Complexity
 * merge sort             nlogn   nlog n
