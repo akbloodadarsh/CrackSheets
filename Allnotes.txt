@@ -1596,6 +1596,44 @@ What is a repeater?
 
 
 
+*************** MR *************************** 
+* How do you do time management? || What is your management style?
+= In general, 
+1. monthly goals give example
+2. stay updated with the trend 
+3. for mind and body , exercise
+
+During a project complexity increases
+1. used tools to optimizae communication, ex:- trello
+2. communicate with the team
+3. meetings regrading project
+
+
+There were many questions like how I can be a good team player, etc and for each question, the interviewer expected me to support it with real-life instances. I was not prepared in advance about any of these questions but I answered them very genuinely. (It is advisable to be prepared well in advance for such questions but even if you’re not, be confident and answer them genuinely).
+I was asked in detail about the projects that I had and the challenges I faced.
+This round went on for more than 30 minutes.
+How can you work under pressure?
+How do you prioritize your work?
+How do you handle multiple deadlines?
+How do you convince people?
+How do you work/lead in a team?
+How do you learn(books, videos, blogs)?
+Have you ever shown your integrity(refuse to do a task as it was unethical according to you)?
+Location and domain preferences( and why).
+Strengths and weaknesses?
+started of with informal introduction
+-interests
+-strengths
+-weakness
+-project experience (time management)(was asked more deeply on what my part was and how i did it, how i convinced team members)
+-have you used matlab before?if yes, where and why?
+-any plans on further studies?
+-Location preference(why?)
+-then he talked about the EDG program ( i asked a few questions to make it interactive)
+-he asked a coding question
+given a number n. print 1 to n if n>0 or -1 to -n if n<0 (without using a loop or semi colon)
+-he was noting down all the key points of the conversation on a paper. at the end he asked me why do i think he did that?
+-do you have any questions for me?
 
 
 *************HR************
@@ -1608,16 +1646,35 @@ read & write articles, editorials & creating educational videos. & all these act
 person & I like to take a planned approach towards a problem,& if I'm working in a team with a goal to solve a problem, I like to hear all sides & then take the most efficient
 approach which can be applied at the moment and I would love to work in a team and lead it & that's about it.
 
+* I was asked to start with my introduction and then I was asked the standard HR questions and a few questions on my projects.
+Why are you interested in our company || What interests you most about this opportunity? || Why Mathworks? || Why did you apply to Mathworks?
+|| What do you know about us? || About job role.
+
+* What do you want to gain from working here.
+Describe what polymorphism is and why it is useful.
+Tell us about your most relevant work experience related to this position.
+Location preference.
+Family background.
+How would you deal with someone you don't like in the wokring environment?
+
+* What is one quality that makes you stand out?
+Rate yourself on the basis of technical interview.
+* internship experience
+* challenge faced during project, how did you overcome it?
+* describe your strengths, explain scenarios
+-if you were to tell about yourself to a person, what would you tell him
+-how would you develop yourself(i was answering something about learning more technical stuff, but she asked me how do you want to develop as an individual)
+-past interview experiences, why do you think you got rejected, what did do get out of the experience?
+-what do you like about your campus and why?
+
 Tell me about the project you have done
-What do you know about tcs. 
 * Who motivates you the most?Who motivates you the most?
 = 
 
 * Three take away from IIT Patna, etc.
 
 * talk about about my strengths and weaknesses.
-= I think its that when i do some project or after doing coding questions for hours, or after participating in coding challenges or after learning some new approach to solve some problems, and after putting in all that effort,and when i get free, then i want to go out on weekends, and maybe go hangout with friends, or when i wanna go see some movie,or buy a gaming cosole or install windows to play games, and i want to do something else,but I know that this thing im doing is going to bring me most value, and that moment when i decide to sit down to learn more, no one's forcing me to do that, their is no pressure on me, its somethig deep down that i know that I want to do,watch the code, wathc the videos learn from articles and do all that,I have that mindset, I have that resourcefulness and thats a skill, and its not something I had before but I developed over the past years and my weakneess  
-asked about my day
+= I think its that when i do some project or after doing coding questions for hours, or after participating in coding challenges or after learning some new approach to solve some problems, and after putting in all that effort,and when i get free, then i want to go out on weekends, and maybe go hangout with friends, or when i wanna go see some movie,or buy a gaming cosole or install windows to play games, and i want to do something else,but I know that this thing im doing is going to bring me most value, and that moment when i decide to sit down to learn more, no one's forcing me to do that, their is no pressure on me, its somethig deep down that i know that I want to do,watch the code, wathc the videos learn from articles and do all that,I have that mindset, I have that resourcefulness and thats a skill, and its not something I had before but I developed over the past years and my weakneess asked about my day
 
 * Why do you want to join tcs?
 
@@ -1637,10 +1694,7 @@ What do you do in your free time?
 = I am a self motivated person. I quickly pick up knowledge related to my projects.For ex:- react and current project, I would like to add that I work well both as an individual contributor and also as a team member & I belive in long term we have to make our team members & ourself better and not be a liability. I will surely work towards building my expertise, towards the projects which are which would ultimately be benefical for the organization & i think I will bring value to th eoorganization, 
 
 * Challenging time?
-1st year of college, because struggleing in programing. and quuestion myslef is this for me?
-
-
-Can you tell me the annual revenue of Cognizant?
+1st year of college, because struggleing in programing. and quuestion myslef is this for me
 What are the things you think you will be liking in Cognizant more than other It firms?
 Tell me about Cognizant.
 )Whether I would like to learn any other programming language other than C++ and Python?
@@ -1656,7 +1710,6 @@ About her essay that she had written in her AMCAT test.
 Tell me something about your family.
 Can you told me some sentences why Listening Skills are important in our life?
 What is your biggest weakness?
-Why CTS? (Prepare this very well).
 Why after ECE you want to join an IT company(Tricky but there is a more tricky way to tackle this so be prepared).
 What was your most challenging situation in life until now.
 If I ask your friends about you, what will they say?
@@ -1671,11 +1724,6 @@ what makes you feel challenge in the college
  
  
 *********************Other********************
-* who is the CEO of CTS
-= Brian Humphries
-* who is the CEO of TCS
-= Rajesh Gopinathan
-
 * What do you mean by cryptocurrency?
 = A cryptocurrency is a digital or virtual currency that is secured by cryptography, which makes it nearly impossible to counterfeit or double-spend. Many cryptocurrencies are decentralized networks based on blockchain technology—a distributed ledger enforced by a disparate network of computers.
 
