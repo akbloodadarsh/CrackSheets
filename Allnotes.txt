@@ -1646,12 +1646,17 @@ read & write articles, editorials & creating educational videos. & all these act
 person & I like to take a planned approach towards a problem,& if I'm working in a team with a goal to solve a problem, I like to hear all sides & then take the most efficient
 approach which can be applied at the moment and I would love to work in a team and lead it & that's about it.
 
-* I was asked to start with my introduction and then I was asked the standard HR questions and a few questions on my projects.
-Why are you interested in our company || What interests you most about this opportunity? || Why Mathworks? || Why did you apply to Mathworks?
+
+* What do you want to gain from working here || Why are you interested in our company || What interests you most about this opportunity? || Why Mathworks? || Why did you apply to Mathworks?
 || What do you know about us? || About job role.
+= culture and core values, i think sumulink is a really cool software, i have seen a lot of projects, that has been created with that, and the functionality of simple drag and drop, is just too good, so basically that really piqued my interest and regarding 
+the position itself, hyderbad team their is a algorithm develpoment for autonomous system,Automatic Code Generation team that piqued my interest and bandglore their is full stack developmet, 
+
+* How would you deal with someone you don't like in the wokring environment?
+= according to the relationship with this person, and why i dont like in working enviroment because of the relation with me or just in general with the team, Empathy, or is their some area that you want me to focus on,
+start with the some personal and if i have a bit of historic background with the person, and also work related issues, and ask for permission to ask these 
 
 * What do you want to gain from working here.
-Describe what polymorphism is and why it is useful.
 Tell us about your most relevant work experience related to this position.
 Location preference.
 Family background.
@@ -1673,10 +1678,34 @@ Tell me about the project you have done
 
 * Three take away from IIT Patna, etc.
 
-* talk about about my strengths and weaknesses.
-= I think its that when i do some project or after doing coding questions for hours, or after participating in coding challenges or after learning some new approach to solve some problems, and after putting in all that effort,and when i get free, then i want to go out on weekends, and maybe go hangout with friends, or when i wanna go see some movie,or buy a gaming cosole or install windows to play games, and i want to do something else,but I know that this thing im doing is going to bring me most value, and that moment when i decide to sit down to learn more, no one's forcing me to do that, their is no pressure on me, its somethig deep down that i know that I want to do,watch the code, wathc the videos learn from articles and do all that,I have that mindset, I have that resourcefulness and thats a skill, and its not something I had before but I developed over the past years and my weakneess asked about my day
+* Strengths
+= collabration:- managing teamwork, leadership, empathy, ex:- teach or guide, focus and commitment
+Ex:- during internship we helped each other out,  
 
-* Why do you want to join tcs?
+* Weakness
+=  thinking out loud, poor money manager, but after reading rich dad poor dad, its a book regarding finance managing knowledge 
+  sometimes unhealthy level of addiction to something , trading project, and i needed to take a step back   
+* How do you do time management? || What is your management style?
+= In general, 
+Expectation ,goal and honest communication
+1. monthly goals give example
+2. stay updated with the trend 
+3. for mind and body , exercise
+
+During a project complexity increases
+1. used tools like trello
+2. communicate with the team
+3. meetings regrading project
+
+* How do you handle a difficult situation?
+= In private, empathy, positivity, learnings
+* Tell me about a mistake/failure
+= SIH event i didn't communicated with my friend regarding the project, so we were not ablt to participate, and then I thought I will make the app all alone, i was like really angry but then i realiszation that if i would have like 
+communicated with my team then this could have been avoided, i really wanted to participate in that, and after than mistake i really learned that i need to communicate with my team, and during the internship, that really helped me out,
+ i organised meets, keep communicating with the team with chats, and if someone like needed day off, then the rest of the team and i take the work, and things like that
+
+* How can you work under pressure?
+= given a thought about this, tell the stressfull part about coding, deadlines,ex:- i divided the task into parts and thought out what might be the most fastest, exercise really helps,
 
 * How tcs will help you to improve your skill?
 Okay, Apart from these things (cricket and college study), What do you do in your free-time?
